@@ -3444,7 +3444,7 @@ textarea.form-control-lg {
   --bs-dropdown-link-hover-color: var(--bs-body-color);
   --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg);
   --bs-dropdown-link-active-color: #fff;
-  --bs-dropdown-link-active-bg: #0d6efd;
+  --bs-dropdown-link-active-bg: #29ABE2;
   --bs-dropdown-link-disabled-color: var(--bs-tertiary-color);
   --bs-dropdown-item-padding-x: 1rem;
   --bs-dropdown-item-padding-y: 0.25rem;
@@ -4112,7 +4112,7 @@ textarea.form-control-lg {
     width: auto !important;
     height: auto !important;
     visibility: visible !important;
-    background-color: transparent !important;
+    background-color: #29ABE2 !important;
     border: 0 !important;
     transform: none !important;
     transition: none;
