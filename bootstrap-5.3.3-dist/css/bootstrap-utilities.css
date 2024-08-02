@@ -36,7 +36,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 13, 110, 253;
+  --bs-primary-rgb: #29ABE2;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -1030,7 +1030,7 @@
 }
 
 .mw-100 {
-  max-width: 100% !important;
+  max-width: 100%nav !important;
 }
 
 .vw-100 {
