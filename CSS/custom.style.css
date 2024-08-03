@@ -10,12 +10,17 @@ nav img {
 nav {
     background-color: #29ABE2;
 }
-
+/* navbar toggle button style */
 .navbar-toggler {
-    background-color: #fff;
-    position:relative;
+    background-color: #FFF;
 }
 
 footer {
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
     background-color: #29ABE2;
+    color: #FFF;
 }
