@@ -3,16 +3,25 @@ body{
 }
 
 nav img {
-    width: 50px;
-    background-color: transparent
+    width:65px;
 }
 
 nav {
     background-color: #29ABE2;
 }
+
+.nav-link { 
+    color: #FFF;
+}
 /* navbar toggle button style */
 .navbar-toggler {
     background-color: #FFF;
+}
+
+.btn-success {
+    color:#FFF;
+    background-color:#29ABE2;
+    border-color: #FFF
 }
 
 footer {

@@ -5,49 +5,57 @@
     <meta charset="UTF-8">
     <title>TripleMonkey Studio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/custom.style.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md fixed-top">
-            <div class="container-fluid">
-              <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#home">home <style>
-                            
-                        </style></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">about</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#connect">connect</a>
-                    </li>
-                </ul>
-              </div>
-            <img class="navbar-brand" src="Images/tm_logo_outlined.png">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarCollapse">
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="search" aria-label="search">
-                  <button class="btn btn-outline-success" type="submit">search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
-    </header>
     <main>
+    <header>
+        <nav class="nav navbar navbar-expand-md fixed-top">
+            <div class="container-fluid">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <img class="navbar-brand position-container-fixed" src="Images/tm_logo_outlined.png">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#connect">connect</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- site search -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="search" aria-label="search">
+                        <button class="btn btn-success" type="submit">go</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- <main> -->
         <section id="home">
             <div class="Container">
                 <img src="Images/TangleBW.jpg" alt="graphite on paper drawing of tangled tails" style="object-fit: contain;
@@ -99,11 +107,15 @@
         </section>
     </main>
     <footer>
-        <div class="position-container">
+        <div class="static-bottom">
+        <!-- <div class="position-container"> -->
             <p>© copyright 2024 TripleMonkey Studio llc.</p>
-            </div>
+        </div>
+        <!-- </div> -->
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
