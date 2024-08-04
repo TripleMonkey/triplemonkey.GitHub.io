@@ -33,3 +33,27 @@ footer {
     background-color: #29ABE2;
     color: #FFF;
 }
+
+.card-img-top {
+    width: 80%;
+    border: #000;
+    border-width: 40px;
+    border-radius: 3%;
+}
+
+.card {
+    justify-content: center;
+    align-items: center;
+    background-color: #29ABE2;
+    border-width: 4px;
+    border-color: #FFF;
+}
+
+.bordered {
+    background-color: #000;
+    padding: 4px;
+    color:#000;
+    border-radius: 10px;
+
+}
+
