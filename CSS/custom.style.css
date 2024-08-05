@@ -1,36 +1,39 @@
-
-
-body{
+body {
     background-color: #FBB03B;
 }
 
-/* nav img {
-    width:65px;
-} */
-
+/*toggle button styles */
 .navbar {
     background-color: #29ABE2;
     background-image: url('/Images/tm_logo_blue_bg.png');
     background-repeat: no-repeat;
-    background-size: 60px;
+    background-size: 50px;
     background-position: top;
-
 }
 
-.nav-link { 
+.nav-link {
     color: #FFF;
 }
-/* navbar toggle button style */
+
 .navbar-toggler {
-    background-color: #FFF;
+    padding: 0;
+    outline-color: #29ABE2;
+}
+
+.navbar-toggler-icon {
+    background-color: #29ABE2;
+    background-image: url('/Images/tm_hamburger_menu.png');
+    outline-color: #29ABE2;
+
 }
 
 .btn-success {
-    color:#FFF;
-    background-color:#29ABE2;
+    color: #FFF;
+    background-color: #29ABE2;
     border-color: #FFF
 }
 
+/* Footer style */
 footer {
     font-size: small;
     display: flex;
@@ -41,11 +44,13 @@ footer {
     color: #FFF;
 }
 
+/* Card row style */
 .card-img-top {
     width: 80%;
+    object-fit: contain;
     border: #000;
     border-width: 40px;
-    border-radius: 3%;
+    border-radius: 3px;
 }
 
 .card {
@@ -59,8 +64,45 @@ footer {
 .outer-border {
     background-color: #000;
     padding: 4px;
-    color:#000;
+    color: #000;
     border-radius: 10px;
-
 }
 
+/* Body styles */
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    size: 95%;
+    box-shadow: 5px 5px 10px #DC9F01, -2px -2px 15px #DC9F01;
+}
+
+.centered {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.text-outline-black {
+    color: #FFF;
+    text-shadow: -1px 0 black, 
+                0 1px black, 
+                1px 0 black, 
+                0 -1px black, 
+                1px 1px #000, 
+                -1px -1px #000,
+                1px -1px #000,
+                -1px 1px #000;
+}
+
+.text-outline-white {
+    color: #000;
+    text-shadow: -1px 0 white, 
+                  0 1px white, 
+                  1px 0 white, 
+                 0 -1px white, 
+                1px 1px white, 
+              -1px -1px #FFF,
+               1px -1px #FFF,
+               -1px 1px #FFF;
+}
