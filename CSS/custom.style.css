@@ -1,13 +1,20 @@
+
+
 body{
     background-color: #FBB03B;
 }
 
-nav img {
+/* nav img {
     width:65px;
-}
+} */
 
-nav {
+.navbar {
     background-color: #29ABE2;
+    background-image: url('/Images/tm_logo_blue_bg.png');
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: top;
+
 }
 
 .nav-link { 
