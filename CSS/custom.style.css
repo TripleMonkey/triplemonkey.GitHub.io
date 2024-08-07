@@ -45,20 +45,22 @@ footer {
 }
 
 /* Card row style */
+.card {
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #29ABE2;
+    border-width: 2px;
+    border-color: #FFF;
+    color:#FFF
+}
+
 .card-img-top {
     width: 80%;
-    object-fit: contain;
+    height: 100px;
+    object-fit: cover;
     border: #000;
     border-width: 40px;
     border-radius: 3px;
-}
-
-.card {
-    justify-content: center;
-    align-items: center;
-    background-color: #29ABE2;
-    border-width: 4px;
-    border-color: #FFF;
 }
 
 .outer-border {
@@ -105,4 +107,11 @@ section {
               -1px -1px #FFF,
                1px -1px #FFF,
                -1px 1px #FFF;
+}
+
+.card-body {
+    text-align: center;
+}
+.card-text {
+    font-size: small;
 }
