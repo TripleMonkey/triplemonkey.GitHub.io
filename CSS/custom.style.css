@@ -46,7 +46,6 @@ footer {
 
 /* Card row style */
 .card {
-    /* justify-content: center; */
     align-items: center;
     background-color: #29ABE2;
     border-width: 2px;
@@ -58,7 +57,6 @@ footer {
     width: 90%;
     height: 120px;
     object-fit:cover;
-    border: #000;
     border-width: 40px;
     border-radius: 3px;
 }
@@ -74,9 +72,6 @@ footer {
 
 section {
     margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    size: 95%;
     box-shadow: 5px 5px 10px #DC9F01, -2px -2px 15px #DC9F01;
 }
 
@@ -114,4 +109,13 @@ section {
 }
 .card-text {
     font-size: small;
+}
+
+.padded-left-text {
+    padding: 3%;
+    text-align: left;
+}
+.padded-right-text {
+    padding: 3%;
+    text-align: right;
 }
