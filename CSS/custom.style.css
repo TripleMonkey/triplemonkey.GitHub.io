@@ -1,6 +1,7 @@
 body {
     background-color: #FBB03B;
     font-family: 'Varela Round';
+    text-shadow: 1px 1px 0.1px #05445f;
 }
 
 /*toggle button styles */
@@ -31,7 +32,7 @@ body {
 .btn-success {
     color: #FFF;
     background-color: #29ABE2;
-    border-color: #FFF
+    border-color: #FFF;
 }
 
 /* Footer style */
@@ -46,10 +47,8 @@ footer {
 }
 
 /* Card row style */
-.row {
-    .outer-border {
-        width: 100%
-    }
+.row .outer-border {
+        width: 100%;
 }
 
 .card {
@@ -86,45 +85,53 @@ section .card {
     padding: 4px;
     color: #000;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px #614601;
 }
 
 /* Body styles */
 
 section {
-    margin: 20px;
-    padding: 3% 0%;
-    box-shadow: 3px 3px 15px #DC9F01, -3px -3px 15px #DC9F01;
+    margin: 10px; 
 }
 
+section h1 {
+    text-align: center;
+    color: #ff9d00; 
+}
+
+section h3 {
+    text-align: center;
+    text-shadow: 1px 1px 1px #05445f;
+
+}
 .centered {
-    margin-top: 20px;
     text-align: center;
 }
 
 .text-outline-black {
-    color: #FFF;
     text-shadow:
-        -2px  0px 2px black,
-         0px  2px 2px black,
-         2px  0px 2px black,
-         0px -2px 2px black,
-         2px  2px 2px #000,
-        -2px -2px 2px #000,
-         2px -2px 2px #000,
-        -2px  2px 2px #000;
+        -1px  0   1px #000,
+         1px  0   1px #000,
+         1px  1px 1px #000,
+        -1px -1px 1px #000,
+         1px -1px 1px #000,
+        -1px  1px 1px #000,
+         0    1px 1px #000,
+         0   -1px 1px #000,
+         3px 3px 2px #05445f;
 }
 
 .text-outline-white {
-    color: #000;
     text-shadow:
-        -1px 0 white,
-        0 1px white,
-        1px 0 white,
-        0 -1px white,
-        1px 1px white,
-        -1px -1px #FFF,
-        1px -1px #FFF,
-        -1px 1px #FFF;
+        -1px  0   1px #FFF,
+         1px  0   1px #FFF,
+         1px  1px 1px #FFF,
+        -1px -1px 1px #FFF,
+         1px -1px 1px #FFF,
+        -1px  1px 1px #FFF,
+         0    1px 1px #FFF,
+         0   -1px 1px #FFF,
+         3px 3px 2px #05445f;
 }
 
 .padded-left-text {
@@ -139,7 +146,10 @@ section {
 
 /* Accordian style */
 details summary {
-    list-style: none;
+    font-size: xx-large;
+    display: flex;
+    justify-content: space-between;
+    list-style:none;
 }
 
 details p {
@@ -148,28 +158,36 @@ details p {
     margin: 1% 3% 2% 4%;
 }
 
-details summary p {
+details summary {
     display: flex;
     justify-content: space-between;
     font-size: large;
-    margin: 1% 5% 0% 3%;
+    margin: 0% 5% 0% 3%;
 }
 
 details summary span[aria-hidden="true"]::before {
-    font-size: x-large;
+    font-size: large;
     content: "+";
-    color: #DC9F01
+    color: #DC9F01;
 }
 
 details[open] summary span[aria-hidden="true"]::before {
     justify-content: space-between;
-    ;
-    content: "-";
+    content: "–";
     color: #29ABE2;
+    text-shadow:
+        -1px  0   1px #FFF,
+         1px  0   1px #FFF,
+         1px  1px 1px #FFF,
+        -1px -1px 1px #FFF,
+         1px -1px 1px #FFF,
+        -1px  1px 1px #FFF,
+         0    1px 1px #FFF,
+         0   -1px 1px #FFF;
 }
 
 details p {
     display: flex;
-    justify-content: space-between;
-    margin: 1% 3% 2% 4%;
+    justify-content: baseline;
+    margin: -10;
 }
