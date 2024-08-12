@@ -174,7 +174,6 @@ details summary span[aria-hidden="true"]::before {
 details[open] summary span[aria-hidden="true"]::before {
     justify-content: space-between;
     content: "–";
-    color: #29ABE2;
     text-shadow:
         -1px  0   1px #FFF,
          1px  0   1px #FFF,
