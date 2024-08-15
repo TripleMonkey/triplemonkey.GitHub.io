@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="CSS/custom.style.css">
     <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
 </head>
@@ -45,7 +47,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="search" aria-label="search">
-                        <button class="btn btn-success" type="submit">go</button>
+                        <button class="send-button" type="submit">go</button>
                     </form>
                 </div>
             </div>
@@ -150,12 +152,27 @@
         <section class="outer-border" id="connect">
             <div class="card">
                 <h1>be different</h1>
-                <h3 class="text-outline-white" style="color:#8f00ac;">connect with me</h3>
-                <ul>
-                    <li>TripleMonkeyStudio@gmail.com</li>
-                    <li>github.com/TripleMonkey</li>
-                    <li>linkedin.com/in/nigelkrajewski/</li>
-                </ul>
+                <form action="https://formsubmit.co/triplemonkeystudio@gmail.com" method="POST">
+                    <div class="form-group">
+                        <label>connect today</label>
+                        <input type="email" readonly class="form-control-plaintext" id="staticEmail"
+                            value="TripleMonkeyStudio@gmail.com" style="padding-left:5px;">
+                    </div>
+                    <div class="form-group">
+                        <label>name</label>
+                        <input type="text" class="form-control" name="name" placeholder="your name">
+                        <label>email <a class="require-indicator">*</a></label>
+                        <input type="email" class="form-control" name="email" placeholder="youremail@address.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">message <a class="require-indicator">*</a></label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" name="message"
+                            rows="3" required></textarea>
+                            <label>required <a class="require-indicator">*</a></label>
+                    </div>
+                    <button class="send-button" type="submit" style="margin: 15px;">send</button>
+                    <input type="hidden" name="_next" value="https://triplemonkey.GitHub.io/pages/thankyou.html">
+                </form>
             </div>
         </section>
     </main>
@@ -167,6 +184,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="./triplemonkey.js"></script>
 </body>
 
 </html>

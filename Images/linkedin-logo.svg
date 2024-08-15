@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 65 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-340.792,-6.15882)">
+        <g id="linkedin-logo" transform="matrix(0.472204,0,0,0.618964,219.542,1.01401)">
+            <rect x="256.775" y="8.312" width="137.066" height="103.399" style="fill:none;"/>
+            <g id="linkedin-logo1" serif:id="linkedin-logo" transform="matrix(2.11773,0,0,1.6156,-364.957,-17.9228)">
+                <g transform="matrix(1,0,0,0.996099,292.353,6.90029)">
+                    <path d="M64.38,19.063L64.38,63.937C64.38,68.546 60.653,72.287 56.062,72.287L11.123,72.287C6.532,72.287 2.805,68.546 2.805,63.937L2.805,19.063C2.805,14.454 6.532,10.713 11.123,10.713L56.062,10.713C60.653,10.713 64.38,14.454 64.38,19.063Z" style="fill:rgb(2,136,209);"/>
+                </g>
+                <g id="in" transform="matrix(1,0,0,1,33.2355,-2.03129)">
+                    <g transform="matrix(1.03721,0,0,1.03721,256.295,7.35218)">
+                        <circle cx="19.401" cy="25.581" r="4.173" style="fill:white;"/>
+                    </g>
+                    <g transform="matrix(1,0,0,1,256.775,8.31196)">
+                        <rect x="15.285" y="33.37" width="8.702" height="28.972" style="fill:white;"/>
+                    </g>
+                    <g transform="matrix(1,0,0,1,270.671,8.31196)">
+                        <path d="M23.987,43.576L23.987,62.342L15.285,62.342L15.285,33.37L23.987,33.37L23.987,36.737C25.137,35.539 26.581,34.553 28.149,33.899C31.331,32.574 37.509,32.325 41.226,38.496C42.03,39.826 42.463,41.348 42.48,42.903C42.536,48.129 42.691,62.52 42.691,62.52L33.988,62.52L33.908,45.227C33.908,45.227 33.794,41.744 29.415,40.736C26.456,40.055 24.901,41.826 23.987,43.576Z" style="fill:white;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
