@@ -11,6 +11,8 @@ body {
     background-repeat: no-repeat;
     background-size: 50px;
     background-position: top;
+    outline-style: auto;
+    outline-color: #05445f;
 }
 
 .nav-link {
@@ -44,6 +46,8 @@ footer {
     padding-top: 1em;
     background-color: #29ABE2;
     color: #FFF;
+    outline-style: auto;
+    outline-color: #05445f;
 }
 
 .card {
