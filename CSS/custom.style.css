@@ -7,10 +7,6 @@ body {
 /*toggle button styles */
 .navbar {
     background-color: #29ABE2;
-    background-image: url('/Images/tm_logo_blue_bg.png');
-    background-repeat: no-repeat;
-    background-size: 50px;
-    background-position: top;
     outline-style: auto;
     outline-color: #05445f;
 }
@@ -59,9 +55,12 @@ footer {
     color: #FFF;
 }
 
+.row .card {
+    aspect-ratio: calc(2/3);
+}
 .card-img-top {
     width: 90%;
-    height: 120px;
+    height: 60%;
     object-fit: cover;
     border-color: #DC9F01;
     border-width: 4px;
@@ -89,9 +88,6 @@ section .card {
     box-shadow: 2px 2px 10px #614601;
 }
 
-/* .row .outer-border {
-    size: 100%;
-} */
 /* Body styles */
 
 section {
