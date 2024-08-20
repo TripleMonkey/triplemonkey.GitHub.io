@@ -110,15 +110,14 @@ section h3 {
 
 .text-outline-black {
     text-shadow:
-        -1px  0   1px #000,
-         1px  0   1px #000,
-         1px  1px 1px #000,
-        -1px -1px 1px #000,
-         1px -1px 1px #000,
-        -1px  1px 1px #000,
-         0    1px 1px #000,
-         0   -1px 1px #000,
-         1px 1px 2px #05445f;
+        -2px  0   1px #000,
+         2px  0   1px #000,
+         2px  1px 1px #000,
+        -2px -1px 1px #000,
+         2px -1px 1px #000,
+        -2px  1px 1px #000,
+         0    2px 1px #000,
+         0   -2px 1px #000;
 }
 
 .text-outline-white {
@@ -130,8 +129,7 @@ section h3 {
          1px -1px 1px #FFF,
         -1px  1px 1px #FFF,
          0    1px 1px #FFF,
-         0   -1px 1px #FFF,
-         1px 1px 3px #05445f;
+         0   -1px 1px #FFF;
 }
 
 /* Accordian style */
@@ -176,7 +174,7 @@ input {
     height:39px;
     color:#FFF;
     background-color: #ff9d00;
-    text-shadow: 1px 1px 2px #000;
+    text-shadow: 1px 1px 2px #bd5b00;
     border-radius: 10px;
     border-width: 2px;
     border-color:#05445f;
@@ -187,17 +185,19 @@ input {
     color: red;
     font-size: large;
 }
+
 .tms-email {
     padding: 10px;
     color: #FFF;
     font-size: large;
     text-shadow:
-    -1px  0   0.5px #614601,
-     1px  0   0.5px #614601,
-     1px  1px 0.5px #614601,
-    -1px -1px 0.5px #614601,
-     1px -1px 0.5px #614601,
-    -1px  1px 0.5px #614601,
-     0    1px 0.5px #614601,
-     0   -1px 0.5px #614601;
+        -1px  0   0.5px #614601,
+         1px  0   0.5px #614601,
+         1px  1px 0.5px #614601,
+        -1px -1px 0.5px #614601,
+         1px -1px 0.5px #614601,
+        -1px  1px 0.5px #614601,
+         0    1px 0.5px #614601,
+         0   -1px 0.5px #614601;
 }
+
