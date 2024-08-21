@@ -3,19 +3,22 @@
     Javascript for html
 */
 
+let CURRENT_PAGE = "home.html"
+let htmlMain = document.getElementsByTagName("link")[0].import;
 
+// window.onload = function () {
+//     document.getElementById('html-main').innerHTML = htmlMain
+// };
 
-// const LINK_ICON_SIZE = "30%";
-// document.getElementById('icon').innerHTML = LINK_ICON_SIZE;
-// document.getSelection('size').innerHTML = LINK_ICON_SIZE
+// window.addEventListener("load", function () {
+//     document.getElementsByTagName("body")
+//         .replaceChild(CURRENT_PAGE.getElementsByTagName("main")[0],
+//             document.getElementsByTagName("main")[0]);
+// }, false);
 
-
-const LINK_ICON_SIZE = "30px";
-
-window.onload = function(){
-    document.getElementById('icon').style.width = LINK_ICON_SIZE;
-};
-
-window.onload = function(){
-
-};
+function updateMain(page = String) {
+    CURRENT_PAGE = page;
+    document.getElementsByTagName("body")
+        .replaceChild(CURRENT_PAGE.getElementsByTagName("main")[0],
+            document.getElementsByTagName("main")[0]);
+}

@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="CSS/custom.style.css">
     <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <link href="pages/home.html" rel="import" />
+    <link href="pages/gallery.html" rel="import" />
+    <link href="pages/about.html" rel="import" />
+    <link href="pages/connect.html" rel="import" />
 </head>
 
-<body>
+<body id="html-main">
     <header>
         <nav class="nav navbar navbar-expand-md fixed-top">
             <div class="container-fluid">
@@ -30,17 +34,17 @@
 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="https://triplemonkey.GitHub.io">home</a>
+                        <li class="nav-item active" onclick="">
+                            <a class="nav-link" onclick="updateMain('home.html')">home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://triplemonkey.GitHub.io/pages/aaks.html">gallery</a>
+                            <a class="nav-link" onclick="updateMain('gallery.html')">gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">about</a>
+                            <a class="nav-link" onclick="updateMain('about.html')">about</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#connect">connect</a>
+                            <a class="nav-link" onclick="updateMain('pages/connect.html')">connect</a>
                         </li>
                     </ul>
                 </div>
@@ -61,121 +65,8 @@
             <br>
         </div>
     </header>
-    <main>
-        <!-- Project cards -->
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col">
-                    <button class="outer-border">
-                        <div class="card">
-                            <p class="card-title text-outline-black">imagine</p>
-                            <img class="card-img-top" src="Images/A.png" alt="red letter A in red circle spray painted over violet and white pair of hands forming a leter A, on black background.">
-                            <div class="card-body">
-                                <!-- <p class="card-text">imagine</p> -->
-                            </div>
-                        </div>
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="outer-border">
-                        <div class="card">
-                            <p class="card-title text-outline-black">illustrate</p>
-                            <img class="card-img-top" src="Images/ipadCampShareMockup.jpg" alt="CampShare app design mockup on iPad.">
-                            <div class="card-body">
-                                <!-- <p class="card-text">illustrate</p> -->
-                            </div>
-                        </div>
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="outer-border">
-                        <div class="card">
-                            <p class="card-title text-outline-black">iterate</p>
-                            <img class="card-img-top" src="Images/MemoryPirate1024x1024.jpg" alt="Memory Pirates app icon, wooden treasure chest with gold trim on orange gradiant background.">
-                            <div class="card-body">
-                                <!-- <p class="card-text">iterate</p> -->
-                            </div>
-                        </div>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Page title / author -->
-        <div class="centered" style="padding: 3%;">
-            <h1 class="text-outline-black" style="color:#FFF;">TripleMonkey Studio</h1>
-            <h4>from</h4>
-            <h2 class="text-outline-white">NIGEL KRAJEWSKI</h2>
-        </div>
-        <!-- About FAQ -->
-        <section class="outer-border" id="about">
-            <div class="card">
-                <h1>gather your bearings</h1>
-                <details>
-                    <summary class="text-outline-black">
-                        where am I<span aria-hidden="true"></span>
-                    </summary>
-                    <p>you are visiting TripleMonkey Studio, home to artist and independent software
-                        developer Nigel
-                        Krajewski.
-                    </p>
-                </details>
-
-                <details>
-                    <summary class="text-outline-black">
-                        why does this place exist<span aria-hidden="true"></span>
-                    </summary>
-                    <p>TripleMonkey Studio serves as the portfolio of Nigel Krajewski. included here, you will find a
-                        showcase of individuality, graphic and mobile design sense, and the ability to bring creations
-                        to
-                        life.
-                    </p>
-                </details>
-
-                <details>
-                    <summary class="text-outline-black">
-                        who are you<span aria-hidden="true"></span>
-                    </summary>
-                    <p> I am Nigel—another starving artist saving the world one day at a time. natural ingenuity drives
-                        me to embrace the DIY lifestyle and create new from the old. I proudly support diversity and
-                        continually question the status quo. we are all equal and should share our knowledge freely with
-                        the world.
-                    </p>
-                </details>
-
-                <details>
-                    <summary class="text-outline-black">
-                        how did I get here<span aria-hidden="true"></span>
-                    </summary>
-                    <p> it is okay to not know everything. just keep following your own path forward.
-                    </p>
-                </details>
-            </div>
-        </section>
-        <section class="outer-border" id="connect">
-            <div class="card">
-                <h1>be different</h1>
-                <form action="https://formsubmit.co/triplemonkeystudio@gmail.com" method="POST">
-                    <div class="form-group">
-                        <label>connect today</label>
-                        <p class="tms-email">TripleMonkeyStudio@gmail.com</p>
-                    </div>
-                    <div class="form-group">
-                        <label>name</label>
-                        <input type="text" class="form-control" name="name" placeholder="your name">
-                        <label>email <a class="require-indicator">*</a></label>
-                        <input type="email" class="form-control" name="email" placeholder="youremail@address.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">message <a class="require-indicator">*</a></label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" name="message"
-                            rows="3" required></textarea>
-                            <label>required <a class="require-indicator">*</a></label>
-                    </div>
-                    <button class="send-button" type="submit" style="margin: 15px;">send</button>
-                    <input type="hidden" name="_next" value="https://triplemonkey.GitHub.io/pages/thankyou.html">
-                </form>
-            </div>
-        </section>
+    <main >
+       <p>didnt work</p> 
     </main>
     <footer class="static-bottom">
         <div>
