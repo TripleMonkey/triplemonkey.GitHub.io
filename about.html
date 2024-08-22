@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TripleMonkey Studio — about Nigel Krajewski</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- bootstrap stylesheet adds via setup.html include -->
+    <!-- include custom CSS here for improved response -->
+    <link rel="stylesheet" href="CSS/custom.style.css">
+</head>
+
+<body>
+    <header onload="updateActivePage(index)" w3-include-html="setup.html"></header>
+    <main>
+        <!-- About FAQ -->
+        <section class="outer-border" id="about">
+            <div class="card">
+                <h1>gather your bearings</h1>
+                <details>
+                    <summary class="text-outline-black">
+                        where am I<span aria-hidden="true"></span>
+                    </summary>
+                    <p>you are visiting TripleMonkey Studio, home to artist and independent software
+                        developer Nigel
+                        Krajewski.
+                    </p>
+                </details>
+
+                <details>
+                    <summary class="text-outline-black">
+                        why does this place exist<span aria-hidden="true"></span>
+                    </summary>
+                    <p>TripleMonkey Studio serves as the portfolio of Nigel Krajewski. included here, you will find a
+                        showcase of individuality, graphic and mobile design sense, and the ability to bring creations
+                        to
+                        life.
+                    </p>
+                </details>
+
+                <details>
+                    <summary class="text-outline-black">
+                        who are you<span aria-hidden="true"></span>
+                    </summary>
+                    <p> I am Nigel—another starving artist saving the world one day at a time. natural ingenuity drives
+                        me to embrace the DIY lifestyle and create new from the old. I proudly support diversity and
+                        continually question the status quo. we are all equal and should share our knowledge freely with
+                        the world.
+                    </p>
+                </details>
+
+                <details>
+                    <summary class="text-outline-black">
+                        how did I get here<span aria-hidden="true"></span>
+                    </summary>
+                    <p> it is okay to not know everything. just keep following your own path forward.
+                    </p>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer class="static-bottom">
+        <div>
+            <p>© copyright 2024 TripleMonkey Studio llc.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./triplemonkey.js"></script>
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>
