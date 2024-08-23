@@ -12,17 +12,17 @@
 
 <body>
     <!-- add common header using JS function -->
-    <header onload="updateActivePage(index)" w3-include-html="setup.html"></header>
-    <main>
+    <header w3-include-html="setup.html"></header>
+    <main id="main">
         <!-- Project cards -->
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col">
-                    <button class="outer-border">
+                    <button class="col outer-border">
                         <div class="card">
                             <p class="card-title text-outline-black">imagine</p>
                             <img class="card-img-top" src="Images/A.png"
-                                alt="red letter A in red circle spray painted over violet and white pair of hands forming a leter A, on black background.">
+                                alt="letter A in circle spray painted red over violet and white pair of hands forming a letter A, on black background.">
                             <div class="card-body">
                                 <!-- <p class="card-text">imagine</p> -->
                             </div>
@@ -61,51 +61,7 @@
             <h4>from</h4>
             <h2 class="text-outline-white">NIGEL KRAJEWSKI</h2>
         </div>
-        <!-- About FAQ -->
-        <section class="outer-border" id="about">
-            <div class="card">
-                <h1>gather your bearings</h1>
-                <details>
-                    <summary class="text-outline-black">
-                        where am I<span aria-hidden="true"></span>
-                    </summary>
-                    <p>you are visiting TripleMonkey Studio, home to artist and independent software
-                        developer Nigel
-                        Krajewski.
-                    </p>
-                </details>
 
-                <details>
-                    <summary class="text-outline-black">
-                        why does this place exist<span aria-hidden="true"></span>
-                    </summary>
-                    <p>TripleMonkey Studio serves as the portfolio of Nigel Krajewski. included here, you will find a
-                        showcase of individuality, graphic and mobile design sense, and the ability to bring creations
-                        to
-                        life.
-                    </p>
-                </details>
-
-                <details>
-                    <summary class="text-outline-black">
-                        who are you<span aria-hidden="true"></span>
-                    </summary>
-                    <p> I am Nigel—another starving artist saving the world one day at a time. natural ingenuity drives
-                        me to embrace the DIY lifestyle and create new from the old. I proudly support diversity and
-                        continually question the status quo. we are all equal and should share our knowledge freely with
-                        the world.
-                    </p>
-                </details>
-
-                <details>
-                    <summary class="text-outline-black">
-                        how did I get here<span aria-hidden="true"></span>
-                    </summary>
-                    <p> it is okay to not know everything. just keep following your own path forward.
-                    </p>
-                </details>
-            </div>
-        </section>
         <section class="outer-border" id="connect">
             <div class="card">
                 <h1>be different</h1>
@@ -115,17 +71,30 @@
                         <p class="tms-email">TripleMonkeyStudio@gmail.com</p>
                     </div>
                     <div class="form-group">
-                        <label>name</label>
-                        <input type="text" class="form-control" name="name" placeholder="your name">
-                        <label>email <a class="require-indicator">*</a></label>
+                        <label aria-hidden="true">name</label>
+                        <input type="text" class="form-control" name="name" placeholder="your name"
+                            aria-label="Enter your name.">
+                        <label>
+                            <div class="row" aria-hidden="true">
+                                <p class="col">email</p>
+                                <p class="col require-indicator">*</p>
+                            </div>
+                        </label>
                         <input type="email" class="form-control" name="email" placeholder="youremail@address.com"
                             required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">message <a class="require-indicator">*</a></label>
+                        <label for="exampleFormControlTextarea1" aria-hidden="true">message <a
+                                class="require-indicator">*</a></label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3"
-                            required></textarea>
-                        <label>required <a class="require-indicator">*</a></label>
+                            required>
+                        </textarea>
+                        <label>
+                            <div class="row" aria-hidden="true">
+                                <p class="col">required</p>
+                                <p class="col require-indicator">*</p>
+                            </div>
+                        </label>
                     </div>
                     <button class="send-button" type="submit" style="margin: 15px;">send</button>
                     <input type="hidden" name="_next" value="https://triplemonkey.GitHub.io/pages/thankyou.html">
