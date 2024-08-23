@@ -1,4 +1,11 @@
+
+
 body {
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
     background-color: #FBB03B;
     font-family: 'Varela Round';
     text-shadow: 1px 1px 0.1px #05445f;
@@ -181,6 +188,7 @@ input {
 }
 
 .require-indicator {
+    padding: 0px;
     text-decoration-line: none;
     color: red;
     font-size: large;
@@ -201,3 +209,17 @@ input {
          0   -1px 0.5px #614601;
 }
 
+.skip-to-main-content-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: black;
+    color: white;
+    opacity: 0;
+  }
+  .skip-to-main-content-link:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+  }
