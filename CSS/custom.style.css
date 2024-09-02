@@ -1,7 +1,9 @@
-body {
+html, body {
     min-height: 100vh;
     margin: 0;
+}
 
+body {
     display: flex;
     flex-direction: column;
     background-color: #FBB03B;
@@ -9,6 +11,9 @@ body {
     text-shadow: 1px 1px 0.1px #05445f;
 }
 
+main {
+    flex: 1 0 auto;
+}
 /*toggle button styles */
 .navbar {
     background-color: #29ABE2;
@@ -42,6 +47,7 @@ body {
 footer {
     font-size: small;
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
     padding-top: 1em;
@@ -51,6 +57,7 @@ footer {
     outline-color: #05445f;
 }
 
+/* Content styles */
 .card {
     align-items: center;
     justify-content: space-around;
@@ -76,7 +83,6 @@ footer {
 section p {
     align-items: center;
     justify-content: space-between;
-
 }
 
 section .card {
