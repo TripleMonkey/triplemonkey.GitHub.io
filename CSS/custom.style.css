@@ -8,7 +8,8 @@ body {
     flex-direction: column;
     background-color: #FBB03B;
     font-family: 'Varela Round';
-    text-shadow: 1px 1px 0.1px #05445f;
+    /* text-shadow: 1px 1px 0.1px #05445f; */
+    /* text-shadow: text-outline-blac */
 }
 
 main {
@@ -80,6 +81,7 @@ footer {
     border-radius: 3%;
 }
 
+
 section p {
     align-items: center;
     justify-content: space-between;
@@ -92,7 +94,6 @@ section .card {
 }
 
 .outer-border {
-    width: 95%;
     background-color: #000;
     padding: 4px;
     color: #000;
@@ -100,6 +101,9 @@ section .card {
     box-shadow: 2px 2px 10px #614601;
 }
 
+/* .row .outer-border {
+    width: 30vw;
+} */
 /* Body styles */
 
 section {
@@ -121,28 +125,66 @@ section h3 {
     text-align: center;
 }
 
-.text-outline-black {
+body, .text-outline-black {
     text-shadow:
-        -2px 0 1px #000,
-        2px 0 1px #000,
-        2px 1px 1px #000,
-        -2px -1px 1px #000,
-        2px -1px 1px #000,
-        -2px 1px 1px #000,
-        0 2px 1px #000,
-        0 -2px 1px #000;
+        /* -0.5px  0     0.5px #000,
+         0.5px  0     0.5px #000,
+         0.5px  0.5px 0.5px #000,
+        -0.5px -0.5px 0.5px #000,
+         0.5px -0.5px 0.5px #000,
+        -0.5px  0.5px 0.5px #000,
+         0      0.5px 0.5px #000,
+         0     -0.5px 0.5px #000,
+         0      0     0.5px #000, */
+        -0.4px  0     0.5px #000,
+         0.4px  0     0.5px #000,
+         0.4px  0.4px 0.5px #000,
+        -0.4px -0.4px 0.5px #000,
+         0.4px -0.4px 0.5px #000,
+        -0.4px  0.4px 0.5px #000,
+         0      0.4px 0.5px #000,
+         0     -0.4px 0.5px #000,
+         0      0     0.5px #000,
+        -0.3px  0     0.5px #000,
+         0.3px  0     0.5px #000,
+         0.3px  0.3px 0.5px #000,
+        -0.3px -0.3px 0.5px #000,
+         0.3px -0.3px 0.5px #000,
+        -0.3px  0.3px 0.5px #000,
+         0      0.3px 0.5px #000,
+         0     -0.3px 0.5px #000,
+         0      0     0.5px #000,
+        -0.2px  0     0.5px #000,
+         0.2px  0     0.5px #000,
+         0.2px  0.2px 0.5px #000,
+        -0.2px -0.2px 0.5px #000,
+         0.2px -0.2px 0.5px #000,
+        -0.2px  0.2px 0.5px #000,
+         0      0.2px 0.5px #000,
+         0     -0.2px 0.5px #000,
+         0      0     0.5px #000,
+        -0.1px  0     0.5px #000,
+         0.1px  0     0.5px #000,
+         0.1px  0.1px 0.5px #000,
+        -0.1px -0.1px 0.5px #000,
+         0.1px -0.1px 0.5px #000,
+        -0.1px  0.1px 0.5px #000,
+         0      0.1px 0.5px #000,
+         0     -0.1px 0.5px #000,
+         0      0     0.5px #000;
 }
 
 .text-outline-white {
     text-shadow:
-        -1px 0 1px #FFF,
-        1px 0 1px #FFF,
-        1px 1px 1px #FFF,
-        -1px -1px 1px #FFF,
-        1px -1px 1px #FFF,
-        -1px 1px 1px #FFF,
-        0 1px 1px #FFF,
-        0 -1px 1px #FFF;
+        -0.5px  0     0.5px #FFF,
+         0.5px  0     0.5px #FFF,
+         0.5px  0.5px 0.5px #FFF,
+        -0.5px -0.5px 0.5px #FFF,
+         0.5px -0.5px 0.5px #FFF,
+        -0.5px  0.5px 0.5px #FFF,
+         0      0.5px 0.5px #FFF,
+         0     -0.5px 0.5px #FFF,
+         0      0     0.5px #FFF;
 }
 
 /* Accordian style */
@@ -165,7 +207,7 @@ details summary span[aria-hidden="true"]::before {
 }
 
 details[open] summary span[aria-hidden="true"]::before {
-    content: "–";
+    content: "—";
     justify-content: space-between;
 }
 
