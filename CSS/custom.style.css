@@ -113,13 +113,13 @@ article {
     padding: 1em;
     border-radius: 7px;
     border: 2px solid #FFF;
-    color: #FFF;
+    color: #000;
     display: flow-root;
 }
 
 
 .article-image-lt {
-    max-width: 120px;
+    max-width: 140px;
     border: 0.1em solid #000;
     border-radius: 8px;
     float: left;
@@ -132,9 +132,8 @@ article {
     border-radius: 8px;
     float: right;
 }
-
+/* App Store button minimum size per Apple guidelines */
 .app-store-link {
-    /* margin: 0.9em; */
     min-width: 120px;
     min-height: 40px;
 }
@@ -145,7 +144,7 @@ article a {
     text-align: center;
 }
 
-body, .text-outline-black {
+.text-outline-black {
     text-shadow:
         -0.05em  0      0.05em #000,
          0.05em  0      0.05em #000,
