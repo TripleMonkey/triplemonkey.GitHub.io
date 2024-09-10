@@ -102,8 +102,15 @@ section h1 {
     color: #ff9d00;
 }
 
-section h3 {
-    text-align: center;
+section h4 {
+    color: #FFF;
+    font-weight:bolder;
+    text-shadow: 1px 1px 1px #05445f;
+
+}
+
+section h5 {
+    color: #FFF;
     text-shadow: 1px 1px 1px #05445f;
 
 }
@@ -132,11 +139,13 @@ article {
     border-radius: 8px;
     float: right;
 }
+
 /* App Store button minimum size per Apple guidelines */
 .app-store-link {
     min-width: 120px;
     min-height: 40px;
 }
+
 article a {
     text-shadow: 1px 1px 0.1px #000000;
 }
@@ -144,7 +153,7 @@ article a {
     text-align: center;
 }
 
-.text-outline-black {
+section h4, .text-outline-black {
     text-shadow:
         -0.05em  0      0.05em #000,
          0.05em  0      0.05em #000,
