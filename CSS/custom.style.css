@@ -99,7 +99,7 @@ section {
 
 section h1 {
     text-align: center;
-    color: #ff9d00;
+    color: #553501;
 }
 
 section h4 {
@@ -166,7 +166,7 @@ section h4, .text-outline-black {
          0       0      0.05em #000;
 }
 
-.text-outline-white {
+section h3, .text-outline-white {
     text-shadow:
         -0.05em  0      0.05em #FFF,
          0.05em  0      0.05em #FFF,
@@ -189,13 +189,12 @@ input {
     height: 39px;
     color: #FFF;
     background-color: #ff9d00;
-    text-shadow: 1px 1px 2px #bd5b00;
+    text-shadow: 1px 1px 2px #000;
     border-radius: 10px;
     border-width: 2px;
     border-color: #05445f;
 }
-
-.require-indicator {
+span {
     padding: 0px;
     text-decoration-line: none;
     color: red;
