@@ -16,199 +16,113 @@
     <header w3-include-html="setup.html"></header>
     <!-- id="main" required for skip-to-main accessibility -->
     <main id="main">
-
-        <!-- Intro -->
         <section class="outer-border">
-            <article>
-                <img class="app-icon-lg" src="Images/focus_laser/focus_laser_icon.png"
-                    alt="Focus Laser app icon: red concentric rings with a laser line aimed at the center, on black">
-                <span class="status-badge">coming soon to iPhone</span>
-                <h2>Focus Laser</h2>
-                <p class="lede">A focus timer for iPhone built around one idea: once a session starts, the app should
-                    step back and let you work.</p>
-                <p>Pick a session, block the apps that pull you away, and let a glowing laser line track your progress
-                    while everything else fades into the background. Focus Laser is in development now and headed for
-                    the Apple App Store.</p>
+            <article class="case-study">
 
-                <div class="fact-grid">
+                <!-- Intro -->
+                <header class="case-intro">
+                    <img class="case-icon" src="Images/focus_laser/focus_laser_icon.png"
+                        alt="Focus Laser app icon: red concentric rings with a laser line aimed at the center, on black">
                     <div>
-                        <h3>role</h3>
-                        <p>Product design, UI design and iOS development</p>
+                        <span class="status-badge">coming soon to iPhone</span>
+                        <h2>Focus Laser</h2>
+                        <p class="lede">A focus timer for iPhone built around one idea: once a session starts, the
+                            app should step back and let you work.</p>
+                        <p class="case-meta">Design and iOS development by Nigel Krajewski &nbsp;·&nbsp; Swift and
+                            Xcode &nbsp;·&nbsp; iPhone, portrait and landscape</p>
                     </div>
-                    <div>
-                        <h3>platform</h3>
-                        <p>iPhone, portrait and landscape, plus widgets</p>
-                    </div>
-                    <div>
-                        <h3>built with</h3>
-                        <p>Swift and Xcode</p>
-                    </div>
-                    <div>
-                        <h3>status</h3>
-                        <p>In development</p>
-                    </div>
-                </div>
-            </article>
-        </section>
+                </header>
 
-        <!-- The challenge -->
-        <section class="outer-border">
-            <article>
-                <h4>the challenge</h4>
-                <h5>A focus app shouldn't be one more distraction</h5>
+                <!-- The idea -->
+                <h4>the idea</h4>
                 <p>Most timer apps fill the screen with buttons, stats and color that keep pulling your eyes back to
-                    the phone. That works against the reason you opened the app in the first place.</p>
-                <p>The goal for Focus Laser was a timer that is quick to start, easy to read at a glance, and almost
-                    invisible while you work, whether the phone is in your hand or propped up on your desk.</p>
-            </article>
-        </section>
+                    the phone, which works against the reason you opened the app in the first place. I wanted a timer
+                    that is quick to start, easy to read at a glance, and almost invisible once it's running, whether
+                    the phone is in your hand or propped up on your desk.</p>
 
-        <!-- Design decision: dimming focus screen -->
-        <section class="outer-border">
-            <article>
-                <h4>design decision</h4>
-                <h5>A distraction-free focus screen</h5>
-                <p>Before a session, the focus screen is ready for setup: a large digital-clock timer, one-tap presets
-                    of 10, 20, 40 or 60 minutes, a custom option, and a bold <em>Start Focus</em> button.</p>
-                <p>The moment a session starts, the interface changes character. The presets dim almost to nothing,
-                    the start button gives way to a quiet <em>Cancel</em>, and a glowing laser line traces the session
-                    from start to finish. The timer and the laser become the brightest things on the screen.</p>
-                <ul>
-                    <li><strong>Less visual noise.</strong> Dimmed controls stop competing for attention, so your eyes
-                        go back to your work, not the phone.</li>
-                    <li><strong>Still within reach.</strong> Controls are dimmed, not hidden, and Cancel is always one
-                        tap away.</li>
-                    <li><strong>A clear sense of mode.</strong> The change in brightness makes it obvious at a glance
-                        whether you're focusing or between sessions.</li>
-                </ul>
-                <div class="shot-row">
+                <!-- Focus screen -->
+                <h4>a screen that steps back</h4>
+                <div class="case-shots">
                     <figure>
                         <img src="Images/focus_laser/preset_sessions.jpg" loading="lazy"
                             alt="Focus Laser before a session in the Red Night theme: a 20:00 timer, preset buttons for 10, 20, 40 and 60 minutes, and a Start Focus button.">
-                        <figcaption>Before a session: presets and Start Focus, fully lit.</figcaption>
+                        <figcaption>Ready to start, everything lit.</figcaption>
                     </figure>
                     <figure>
                         <img src="Images/focus_laser/distraction_free.jpg" loading="lazy"
                             alt="Focus Laser during a session in the Deep Ocean theme: a 04:54 timer, a glowing blue laser progress line, dimmed presets and a Cancel button.">
-                        <figcaption>During a session: the presets dim and the laser line takes over.</figcaption>
+                        <figcaption>Mid-session, the controls fade back.</figcaption>
                     </figure>
                 </div>
-            </article>
-        </section>
+                <p>Before a session, the focus screen is all about setup. A large digital-clock timer sits above
+                    one-tap presets for 10, 20, 40 and 60 minutes, a custom option, and a bold Start Focus button.
+                    Everything is fully lit and easy to reach.</p>
+                <p>The moment you start, the screen changes character. The presets dim almost to nothing, Start
+                    Focus gives way to a quiet Cancel, and a glowing laser line traces the session from start to
+                    finish. The timer and the laser become the brightest things on the screen, so a glance tells you
+                    where you are and your attention goes straight back to your work. I chose to dim the controls
+                    rather than hide them: nothing jumps around, and Cancel is always one tap away. The change in
+                    brightness also makes it obvious, even from across a desk, whether you're focusing or between
+                    sessions.</p>
 
-        <!-- Design decision: orientation -->
-        <section class="outer-border">
-            <article>
-                <h4>design decision</h4>
-                <h5>Great in portrait or landscape</h5>
-                <p>People don't hold a phone the same way while they work. Focus Laser works in both orientations,
-                    and the layout adapts to make the most of each.</p>
-                <ul>
-                    <li><strong>Portrait</strong> for one-handed use: the timer sits above the presets and the start
-                        button, all within reach of your thumb.</li>
-                    <li><strong>Landscape</strong> for the desk: the timer moves to one side and the controls to the
-                        other, so a phone on a stand becomes a large, glanceable focus clock.</li>
-                    <li><strong>One consistent experience.</strong> The timer, laser line and controls keep the same
-                        hierarchy in either orientation, so nothing has to be relearned.</li>
-                </ul>
-                <div class="shot-row shot-row-single">
+                <!-- Orientation -->
+                <h4>portrait or landscape</h4>
+                <div class="case-split">
+                    <div>
+                        <p>People don't hold a phone the same way while they work, so Focus Laser is built for both
+                            orientations rather than locked to one.</p>
+                        <p>In portrait, the timer sits above the presets and the start button, all within reach of
+                            your thumb. Turn the phone on its side and the layout reflows: the timer moves to one side
+                            and the controls to the other, turning a phone on a desk stand into a large, glanceable
+                            focus clock.</p>
+                        <p>Either way, the timer, the laser line and the controls keep the same order of importance,
+                            so there's nothing to relearn when you rotate the phone.</p>
+                    </div>
                     <figure>
                         <img src="Images/focus_laser/landscape_portrait.jpg" loading="lazy"
                             alt="Focus Laser in the Forest theme shown in portrait during a session and in landscape before a session, with green digital timers.">
-                        <figcaption>The same focus screen in portrait and in landscape.</figcaption>
+                        <figcaption>The same focus screen, both ways.</figcaption>
                     </figure>
                 </div>
-            </article>
-        </section>
 
-        <!-- Features -->
-        <section class="outer-border">
-            <article>
+                <!-- Features -->
                 <h4>features</h4>
-                <div class="feature-grid">
-                    <div>
-                        <h3>Preset and custom sessions</h3>
-                        <p>Start a 10, 20, 40 or 60 minute session in one tap, or set your own length.</p>
-                    </div>
-                    <div>
-                        <h3>Distraction-free focus screen</h3>
-                        <p>Controls dim during a session, leaving the timer and laser line in view.</p>
-                    </div>
-                    <div>
-                        <h3>Block distracting apps</h3>
-                        <p>Choose the apps to block, and they stay locked until your session ends.</p>
-                    </div>
-                    <div>
-                        <h3>Home and lock screen widgets</h3>
-                        <p>See a live session countdown, today's sessions and your totals without opening the app.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Nine themes</h3>
-                        <p>Red Night, Red Light, Monochrome, Deep Ocean, Sunset, Forest, Neon Nights, Rose Gold and
-                            Arctic.</p>
-                    </div>
-                    <div>
-                        <h3>Streaks and stats</h3>
-                        <p>Daily streaks, sessions today and total focus time keep the momentum going.</p>
-                    </div>
-                    <div>
-                        <h3>Portrait or landscape</h3>
-                        <p>In your hand or on a desk stand, the layout adapts to fit.</p>
-                    </div>
-                    <div>
-                        <h3>Private by design</h3>
-                        <p>No data collected.</p>
-                    </div>
-                </div>
-                <div class="shot-row shot-row-three">
+                <ul class="case-features">
+                    <li>Preset sessions of 10, 20, 40 or 60 minutes, or a custom length</li>
+                    <li>A distraction-free focus screen with a glowing laser progress line</li>
+                    <li>Block the apps you choose for the length of a session</li>
+                    <li>Home and lock screen widgets with a live countdown and today's totals</li>
+                    <li>Nine themes: Red Night, Red Light, Monochrome, Deep Ocean, Sunset, Forest, Neon Nights, Rose
+                        Gold and Arctic</li>
+                    <li>Daily streaks, sessions today and total focus time</li>
+                    <li>No data collected</li>
+                </ul>
+                <div class="case-shots case-shots-three">
                     <figure>
                         <img src="Images/focus_laser/block_apps.jpg" loading="lazy"
                             alt="Focus Laser settings: a Block Apps During Focus switch with 13 apps selected, and a grid of nine themes.">
-                        <figcaption>Block distracting apps during focus.</figcaption>
+                        <figcaption>Block distracting apps.</figcaption>
                     </figure>
                     <figure>
                         <img src="Images/focus_laser/widgets.jpg" loading="lazy"
                             alt="Focus Laser widgets on an iPhone home screen showing a live 0:53 countdown, 4 sessions today, 3.7 hours total, a 77-day best streak and 91 sessions.">
-                        <figcaption>Live widgets for home and lock screen.</figcaption>
+                        <figcaption>Live widgets.</figcaption>
                     </figure>
                     <figure>
                         <img src="Images/focus_laser/themes.jpg" loading="lazy"
                             alt="Focus Laser in the Sunset theme: a coral 20:00 timer on a deep purple background with a coral Start Focus button.">
-                        <figcaption>Choose a theme to fit your vibe.</figcaption>
+                        <figcaption>Themes to fit your vibe.</figcaption>
                     </figure>
                 </div>
+
+                <!-- Closing -->
+                <h4>what's next</h4>
+                <p>Focus Laser is in development now and headed for the Apple App Store. If you have a project that
+                    needs the same attention to detail, <a href="connect.html">get in touch</a>. In the meantime, you
+                    can play <a href="memory_pirates.html">Memory Pirates</a>, free on iPhone.</p>
+
             </article>
         </section>
-
-        <!-- A session, start to finish -->
-        <section class="outer-border">
-            <article>
-                <h4>a session, start to finish</h4>
-                <ol class="steps">
-                    <li><strong>Pick a length.</strong> Tap a preset or set a custom time while the controls are fully
-                        lit.</li>
-                    <li><strong>Start focus.</strong> The presets dim, your blocked apps lock, and the laser line starts
-                        tracing the session.</li>
-                    <li><strong>Stay in the zone.</strong> Glance at the timer or a widget; Cancel is always one tap
-                        away if you need it.</li>
-                    <li><strong>Build the streak.</strong> Each finished session adds to today's count, your total
-                        time and your daily streak.</li>
-                </ol>
-            </article>
-        </section>
-
-        <!-- Closing -->
-        <section class="outer-border">
-            <article class="centered">
-                <h4>coming soon to the App Store</h4>
-                <p>Focus Laser is in development for iPhone. Have a project that needs the same attention to
-                    detail?</p>
-                <p><a class="learn-more-link" href="connect.html">connect with me</a> &nbsp;·&nbsp; <a
-                        class="learn-more-link" href="memory_pirates.html">see Memory Pirates</a></p>
-            </article>
-        </section>
-
     </main>
     <footer class="static-bottom">
         <div>
