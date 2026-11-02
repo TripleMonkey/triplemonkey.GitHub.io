@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TripleMonkey Studio — Focus Laser for iPhone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Focus Laser is an upcoming focus timer for iPhone from TripleMonkey Studio, designed around a distraction-free focus screen that works in portrait or landscape.">
+    <!-- bootstrap stylesheet adds via setup.html include -->
+    <!-- include custom CSS here for improved response -->
+    <link rel="stylesheet" href="CSS/custom.style.css">
+</head>
+
+<body>
+    <header w3-include-html="setup.html"></header>
+    <!-- id="main" required for skip-to-main accessibility -->
+    <main id="main">
+
+        <!-- Intro -->
+        <section class="outer-border">
+            <article>
+                <!-- TODO: replace this placeholder with the app icon, e.g.
+                     <img class="app-icon-lg" src="Images/focus_laser/focus_laser_icon.png" alt="Focus Laser app icon"> -->
+                <div class="app-icon-lg shot-placeholder" role="img" aria-label="Focus Laser app icon">app icon</div>
+                <span class="status-badge">coming soon to iPhone</span>
+                <h2>Focus Laser</h2>
+                <p class="lede">A focus timer for iPhone built around one idea: once a session starts, the app should
+                    step back and let you work.</p>
+                <p>Set a session, tune out distractions, and watch your progress add up. Focus Laser is in
+                    development now and headed for the Apple App Store.</p>
+
+                <div class="fact-grid">
+                    <div>
+                        <h3>role</h3>
+                        <p>Product design, UI design and iOS development</p>
+                    </div>
+                    <div>
+                        <h3>platform</h3>
+                        <p>iPhone, portrait and landscape</p>
+                    </div>
+                    <div>
+                        <h3>built with</h3>
+                        <p>Swift and Xcode</p>
+                    </div>
+                    <div>
+                        <h3>status</h3>
+                        <p>In development</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- The challenge -->
+        <section class="outer-border">
+            <article>
+                <h4>the challenge</h4>
+                <h5>A focus app shouldn't be one more distraction</h5>
+                <p>Most timer apps fill the screen with buttons, stats and color that keep pulling your eyes back to
+                    the phone. That works against the reason you opened the app in the first place.</p>
+                <p>The goal for Focus Laser was a timer that is quick to start, easy to read at a glance, and almost
+                    invisible while you work, whether the phone is in your hand, flat on a desk or propped up beside
+                    your keyboard.</p>
+            </article>
+        </section>
+
+        <!-- Design decision: dimming focus screen -->
+        <section class="outer-border">
+            <article>
+                <h4>design decision</h4>
+                <h5>A distraction-free focus screen</h5>
+                <p>The moment a session starts, the interface changes character. Controls, labels and secondary
+                    information dim back, leaving the timer as the brightest thing on the screen.</p>
+                <ul>
+                    <li><strong>Less visual noise.</strong> Dimmed controls stop competing for attention, so your eyes
+                        go back to your work, not the phone.</li>
+                    <li><strong>Still within reach.</strong> Controls are dimmed, not hidden, so pausing or ending a
+                        session never means hunting for a button.</li>
+                    <li><strong>A clear sense of mode.</strong> The change in brightness makes it obvious at a glance
+                        whether you're focusing or between sessions.</li>
+                </ul>
+                <div class="shot-row">
+                    <!-- TODO: replace each placeholder with
+                         <img src="Images/focus_laser/..." alt="..."> -->
+                    <figure>
+                        <div class="shot-placeholder">screenshot: ready to start, controls fully lit</div>
+                        <figcaption>Before a session: everything lit and easy to reach.</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="shot-placeholder">screenshot: focus active, controls dimmed</div>
+                        <figcaption>During a session: the controls dim and the timer takes over.</figcaption>
+                    </figure>
+                </div>
+            </article>
+        </section>
+
+        <!-- Design decision: orientation -->
+        <section class="outer-border">
+            <article>
+                <h4>design decision</h4>
+                <h5>Portrait or landscape</h5>
+                <p>People don't hold a phone the same way while they work. Focus Laser works in both orientations,
+                    and the layout adapts to make the most of each.</p>
+                <ul>
+                    <li><strong>Portrait</strong> for one-handed use: set up a session and start it with your thumb.
+                    </li>
+                    <li><strong>Landscape</strong> for the desk: prop the phone on a stand beside your monitor and it
+                        becomes a large, glanceable focus clock.</li>
+                    <li><strong>One consistent experience.</strong> The timer and controls keep the same hierarchy in
+                        either orientation, so nothing has to be relearned.</li>
+                </ul>
+                <div class="shot-row">
+                    <figure>
+                        <div class="shot-placeholder">screenshot: portrait</div>
+                        <figcaption>Portrait, in your hand.</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="shot-placeholder">screenshot: landscape</div>
+                        <figcaption>Landscape, on the desk.</figcaption>
+                    </figure>
+                </div>
+            </article>
+        </section>
+
+        <!-- Features -->
+        <section class="outer-border">
+            <article>
+                <h4>features</h4>
+                <div class="feature-grid">
+                    <div>
+                        <h3>Customizable timers</h3>
+                        <p>Set your own focus session and break lengths to match the way you work.</p>
+                    </div>
+                    <div>
+                        <h3>Distraction-free mode</h3>
+                        <p>The focus screen dims everything but the timer while a session is active.</p>
+                    </div>
+                    <div>
+                        <h3>Progress tracking</h3>
+                        <p>Daily and weekly stats show how your focus time adds up.</p>
+                    </div>
+                    <div>
+                        <h3>Any orientation</h3>
+                        <p>Use it in portrait in your hand or in landscape on a desk stand.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- A session, start to finish -->
+        <section class="outer-border">
+            <article>
+                <h4>a session, start to finish</h4>
+                <ol class="steps">
+                    <li><strong>Set it up.</strong> Pick a focus length in a couple of taps while the controls are
+                        fully lit.</li>
+                    <li><strong>Lock in.</strong> Start the session and the interface dims back, leaving just the
+                        timer in view.</li>
+                    <li><strong>Take a break.</strong> When time is up, the screen comes back to life so you know it's
+                        time to recharge.</li>
+                    <li><strong>See your progress.</strong> Review your stats and keep the momentum going.</li>
+                </ol>
+            </article>
+        </section>
+
+        <!-- Closing -->
+        <section class="outer-border">
+            <article class="centered">
+                <h4>coming soon to the App Store</h4>
+                <p>Focus Laser is in development for iPhone. Have a project that needs the same attention to
+                    detail?</p>
+                <p><a class="learn-more-link" href="connect.html">connect with me</a> &nbsp;·&nbsp; <a
+                        class="learn-more-link" href="memory_pirates.html">see Memory Pirates</a></p>
+            </article>
+        </section>
+
+    </main>
+    <footer class="static-bottom">
+        <div>
+            <p>© 2026 TripleMonkey Studio LLC.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Script for including header -->
+    <script src="./triplemonkey.js"></script>
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>

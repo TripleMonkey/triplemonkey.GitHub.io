@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>TripleMonkey Studio — Blank Template</title>
+    <title>TripleMonkey Studio — Memory Pirates for iPhone</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- bootstrap stylesheet adds via setup.html include -->
     <!-- include custom CSS here for improved response -->
@@ -17,42 +17,87 @@
         <!-- Page Content goes here -->
         <section class="outer-border">
             <article>
-                <h2>Memory Pirates for iPhone</h2>
-                <aside>
-                    <a href="https://apps.apple.com/us/app/memory-pirates/id6450493085">
-                        <image class="article-image-lt app-store-link"
-                            src="Images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
-                            alt="Open Apple App store to download Memory Pirates"></image>
-                    </a>
-                </aside>
-                <p>improve youur memory recall with this classic image matching game. open all of the matching treasure
-                    chests to win. challange yourself to improve your best times and fewest moves. climb the
-                    leaderboards to be the best among your friends and the world!</p>
-                <p>Memory Pirate began as a course project exploring the use of constraints to present views beautifully
-                    on any Apple device and any device orientation. Design and prototyping were completed using Adobe
-                    XD. The original version was developed in Xcode with Swift and UIKit. I later decided to update the
-                    project to the newer SwiftUI framework with the expectation that handling device size and
-                    orientations would not be ass difficult as they were with the previous UIKit iteration. This turned
-                    out to be a false assumption. Although the SwiftUI Views handle size changes more gracefully,
-                    handling orientation changes remain challenging. This current SwiftUI version of Memory Pirates uses
-                    CloudKit, and GameCenter for data persistence and friendly competition. Available NOW on the Apple
-                    App Store!</p>
-                <image class="article-image-lt" src="Images/MemoryPirate250px_width.png"
-                    alt="Memory Pirates logo, treasure chest on orange background">
-                </image>
-                <aside>
-                    <ul>
-                        <li>Apple CloudKit and CoreData</li>
-                        <li>GameCenter leaderboards and ahievements</li>
-                        <li>SwiftUI framework with MVVM architecture</li>
-                    </ul>
-                </aside>
-                <!-- app store doawnload link -->
-                <a href="https://apps.apple.com/us/app/memory-pirates/id6450493085">
-                    <image class="article-image-lt app-store-link"
-                        src="Images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
-                        alt="Open Apple App store to download Memory Pirates"></image>
-                </a>
+                <img class="app-icon-lg" src="Images/MemoryPirate500px_width.png"
+                    alt="Memory Pirates app icon, treasure chest on orange background">
+                <span class="status-badge">free on iPhone</span>
+                <h2>Memory Pirates</h2>
+                <p class="lede">Ahoy, matey! Improve your memory recall with this classic image matching game. Open all
+                    of the matching treasure chests to win.</p>
+                <p>Challenge yourself to beat your best time and fewest moves, then climb the Game Center
+                    leaderboards to be the best among your friends and the world.</p>
+                <p><a href="https://apps.apple.com/us/app/memory-pirates/id6450493085">
+                    <img class="app-store-link" src="Images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                        alt="Download Memory Pirates on the App Store" style="height: 48px;">
+                </a></p>
+
+                <div class="fact-grid">
+                    <div>
+                        <h3>role</h3>
+                        <p>Design, prototyping and iOS development</p>
+                    </div>
+                    <div>
+                        <h3>platform</h3>
+                        <p>iPhone</p>
+                    </div>
+                    <div>
+                        <h3>built with</h3>
+                        <p>Swift, SwiftUI, CloudKit, Core Data, Game Center</p>
+                    </div>
+                    <div>
+                        <h3>status</h3>
+                        <p>Available now on the App Store</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="outer-border">
+            <article>
+                <h4>the story</h4>
+                <h5>From course project to App Store</h5>
+                <p>Memory Pirates began as a course project exploring the use of constraints to present views
+                    beautifully on any Apple device and in any orientation. Design and prototyping were done in Adobe
+                    XD, and the original version was built in Xcode with Swift and UIKit.</p>
+                <p>I later rebuilt the project with SwiftUI, expecting device sizes and orientations to be easier to
+                    handle than they were with UIKit. That turned out to be only half true: SwiftUI views handle size
+                    changes more gracefully, but orientation changes remained a challenge to get right.</p>
+                <p>The current SwiftUI version uses CloudKit for data persistence and Game Center for friendly
+                    competition.</p>
+            </article>
+        </section>
+
+        <section class="outer-border">
+            <article>
+                <h4>features</h4>
+                <div class="feature-grid">
+                    <div>
+                        <h3>Classic memory match</h3>
+                        <p>Flip cards, find pairs and clear the board.</p>
+                    </div>
+                    <div>
+                        <h3>Game Center leaderboards</h3>
+                        <p>Compete with friends for the best time and fewest moves, and earn achievements.</p>
+                    </div>
+                    <div>
+                        <h3>Pirate adventure</h3>
+                        <p>Pirate-themed graphics and sound bring every round to life.</p>
+                    </div>
+                    <div>
+                        <h3>Free &amp; private</h3>
+                        <p>Free to play, no data collected, and rated 4+ for the whole crew.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="outer-border">
+            <article class="centered">
+                <h4>set sail today</h4>
+                <p><a href="https://apps.apple.com/us/app/memory-pirates/id6450493085">
+                    <img class="app-store-link" src="Images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                        alt="Download Memory Pirates on the App Store" style="height: 48px;">
+                </a></p>
+                <p><a class="learn-more-link" href="focus_laser.html">see Focus Laser, coming soon</a></p>
             </article>
         </section>
 
@@ -64,7 +109,7 @@
     </main>
     <footer class="static-bottom">
         <div>
-            <p>© copyright 2024 TripleMonkey Studio llc.</p>
+            <p>© 2026 TripleMonkey Studio LLC.</p>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
