@@ -28,19 +28,36 @@
                     learning, in software and in other art mediums too.</p>
                 <p>Take a look around, and get in touch if you're working on an app idea or looking for a creative
                     development partner.</p>
-                <p><a class="learn-more-link" href="connect.html">connect with me</a></p>
+                <p><a class="learn-more-link" href="#connect">connect with me</a></p>
             </article>
         </section>
 
-        <section class="outer-border">
+      
+
+        <section class="outer-border" id="connect">
             <article>
-                <h4>Apps</h4>
-                <ul>
-                    <li><a href="focus_laser.html">Focus Laser</a>: a distraction-free focus timer for iPhone,
-                        coming soon.</li>
-                    <li><a href="memory_pirates.html">Memory Pirates</a>: a pirate-themed memory game, free on the App
-                        Store.</li>
-                </ul>
+                <h3>Connect Today</h3>
+                <form action="https://formsubmit.co/triplemonkeystudio@gmail.com" method="POST">
+                    <div class="form-group">
+                        <label>for support questions or to discuss project ideas: </label>
+                        <p class="tms-email">support@TripleMonkey.studio</p>
+                    </div>
+                    <div class="form-group">
+                        <label>name</label>
+                        <input type="text" class="form-control" name="name" placeholder="your name">
+                        <label>email <span>*</span></label>
+                        <input type="email" class="form-control" name="email" placeholder="youremail@address.com"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">message<span>*</span></label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3"
+                            required></textarea>
+                        <label>required <span>*</span></label>
+                    </div>
+                    <button class="send-button" type="submit" style="margin: 15px;">send</button>
+                    <input type="hidden" name="_next" value="https://triplemonkey.studio/thankyou.html">
+                </form>
             </article>
         </section>
     </main>
