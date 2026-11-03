@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #FBB03B;
-    font-family: 'Varela Round';
+    font-family: 'Varela Round', ui-rounded;
 }
 
 main {
@@ -34,7 +34,7 @@ main {
 
 .navbar-toggler-icon {
     background-image: url('/Images/tm_hamburger_menu.png');
-    box-shadow: #000;
+    box-shadow: 1px #000;
 }
 
 /* Gallery drop-down */
