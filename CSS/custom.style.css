@@ -1,3 +1,34 @@
+/* ---------- Theme tokens ----------
+   Light (black on white) is the default. Dark mode is applied by
+   theme.js, which sets data-theme="dark" on <html>. */
+:root {
+    --bg: #FFFFFF;
+    --surface: #FFFFFF;
+    --surface-2: #F4F4F4;
+    --text: #111111;
+    --muted: #5C5C5C;
+    --border: #111111;
+    --border-soft: #DDDDDD;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    --required: #C62828;
+    --bs-body-bg: var(--bg);
+    --bs-body-color: var(--text);
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    --bg: #0E0E0E;
+    --surface: #161616;
+    --surface-2: #202020;
+    --text: #F2F2F2;
+    --muted: #A8A8A8;
+    --border: #F2F2F2;
+    --border-soft: #333333;
+    --shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    --required: #FF7B7B;
+    color-scheme: dark;
+}
+
 html, body {
     min-height: 100vh;
     margin: 0;
@@ -6,7 +37,8 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: #FBB03B;
+    background-color: var(--bg);
+    color: var(--text);
     font-family: 'Varela Round', ui-rounded;
 }
 
@@ -14,62 +46,109 @@ main {
     flex: 1 0 auto;
 }
 
+a {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+a:hover,
+a:focus {
+    color: var(--muted);
+}
+
 /*navbar styles */
 .navbar {
-    background-color: #29ABE2;
-    outline-style: auto;
-    outline-color: #05445f;
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--border-soft);
 }
 
 .nav-link {
-    color: #FFF;
+    color: var(--text);
 }
 
 .navbar-toggler {
     padding: 0.5% 0.5%;
-    text-shadow: 1px 1px 1px #000;
-    color: #FFF;
+    color: var(--text);
     border-width: 0px;
 }
 
+/* Three bars drawn in the current text color, so the icon follows the theme */
 .navbar-toggler-icon {
-    background-image: url('/Images/tm_hamburger_menu.png');
-    box-shadow: 1px #000;
+    background-image: none;
+    background-color: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect x='3' y='6' width='24' height='3' rx='1.5'/%3E%3Crect x='3' y='13.5' width='24' height='3' rx='1.5'/%3E%3Crect x='3' y='21' width='24' height='3' rx='1.5'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect x='3' y='6' width='24' height='3' rx='1.5'/%3E%3Crect x='3' y='13.5' width='24' height='3' rx='1.5'/%3E%3Crect x='3' y='21' width='24' height='3' rx='1.5'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 /* Gallery drop-down */
 .navbar .dropdown-menu {
-    background-color: #29ABE2;
-    border: 2px solid #FFF;
+    background-color: var(--surface);
+    border: 1px solid var(--border-soft);
     border-radius: 10px;
-    box-shadow: 2px 2px 10px #05445f;
+    box-shadow: var(--shadow);
     padding: 0.4em;
 }
 
 .navbar .dropdown-item {
-    color: #FFF;
+    color: var(--text);
     border-radius: 6px;
-    text-shadow: 1px 1px 1px #05445f;
 }
 
 .navbar .dropdown-item:hover,
 .navbar .dropdown-item:focus {
-    background-color: #FBB03B;
-    color: #000;
-    text-shadow: none;
+    background-color: var(--surface-2);
+    color: var(--text);
 }
 
 .nav-link:hover,
 .nav-link:focus,
 .nav-link.show {
-    color: #FFF;
+    color: var(--text);
     text-decoration: underline;
 }
 
+/* Light / dark switch in the navbar */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.3em 0.8em;
+    margin: 0.25em 0;
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--border-soft);
+    border-radius: 999px;
+    font: inherit;
+    font-size: 0.9em;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    border-color: var(--border);
+}
+
+.theme-to-dark,
+.theme-to-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+}
+
+.theme-toggle .material-icons {
+    font-size: 1.2em;
+}
+
+/* Show only the option you can switch to */
+:root[data-theme="dark"] .theme-to-dark,
+:root:not([data-theme="dark"]) .theme-to-light {
+    display: none;
+}
+
 .btn-success {
-    color: #FFF;
-    background-color: #29ABE2;
-    border-color: #FFF;
+    color: var(--bg);
+    background-color: var(--text);
+    border-color: var(--text);
 }
 
 /* Footer style */
@@ -80,19 +159,17 @@ footer {
     justify-content: center;
     align-items: center;
     padding-top: 1em;
-    background-color: #29ABE2;
-    color: #FFF;
-    outline-style: auto;
-    outline-color: #05445f;
+    background-color: var(--bg);
+    color: var(--muted);
+    border-top: 1px solid var(--border-soft);
 }
 
 /* Content styles */
 .card {
     justify-content: space-around;
-    background-color: #29ABE2;
-    border-width: 2px;
-    border-color: #FFF;
-    color: #FFF;
+    background-color: var(--surface);
+    color: var(--text);
+    border: none;
     align-items: center;
     aspect-ratio: calc(2/3);
 }
@@ -101,8 +178,6 @@ footer {
     width: 90%;
     height: 60%;
     object-fit: cover;
-    border-color: #DC9F01;
-    border-width: 4px;
     border-radius: 3%;
 }
 
@@ -112,11 +187,22 @@ section p {
 }
 
 .outer-border {
-    background-color: #000;
-    padding: 4px;
-    color: #000;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px #614601;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    border-radius: 12px;
+}
+
+/* Home page project cards are buttons */
+button.outer-border {
+    color: var(--text);
+    border: 1px solid var(--border-soft);
+    overflow: hidden;
+}
+
+button.outer-border:hover,
+button.outer-border:focus-visible {
+    border-color: var(--border);
 }
 
 /* Body styles */
@@ -126,37 +212,29 @@ section {
     margin: 10px;
 }
 
-section h1 {
-    text-align: center;
-    color: #553501;
+section h1,
+section h3,
+section h4,
+section h5 {
+    color: var(--text);
 }
 
 section h4 {
-    color: #FFF;
-    font-weight:bolder;
-    text-shadow: 1px 1px 1px #05445f;
-
-}
-
-section h5 {
-    color: #FFF;
-    text-shadow: 1px 1px 1px #05445f;
-
+    font-weight: bolder;
 }
 
 article {
-    background-color: #29ABE2;
+    background-color: var(--surface);
     padding: 1em;
-    border-radius: 7px;
-    border: 2px solid #FFF;
-    color: #000;
+    border-radius: 12px;
+    border: 1px solid var(--border-soft);
+    color: var(--text);
     display: flow-root;
 }
 
 
 .article-image-lt {
     max-width: 140px;
-    border: 0.1em solid #000;
     border-radius: 8px;
     float: left;
     margin-right: 2em;
@@ -164,7 +242,7 @@ article {
 
 .article-image-rt {
     max-width: 30%;
-    border: 1px solid #000;
+    border: 1px solid var(--border-soft);
     border-radius: 8px;
     float: right;
 }
@@ -175,37 +253,15 @@ article {
     min-height: 40px;
 }
 
-article a {
-    text-shadow: 1px 1px 0.1px #000000;
-}
 .centered {
     text-align: center;
 }
 
-section h4, .text-outline-black {
-    text-shadow:
-        -0.05em  0      0.05em #000,
-         0.05em  0      0.05em #000,
-         0.05em  0.05em 0.05em #000,
-        -0.05em -0.05em 0.05em #000,
-         0.05em -0.05em 0.05em #000,
-        -0.05em  0.05em 0.05em #000,
-         0       0.05em 0.05em #000,
-         0      -0.05em 0.05em #000,
-         0       0      0.05em #000;
-}
-
-section h3, .text-outline-white {
-    text-shadow:
-        -0.05em  0      0.05em #FFF,
-         0.05em  0      0.05em #FFF,
-         0.05em  0.05em 0.05em #FFF,
-        -0.05em -0.05em 0.05em #FFF,
-         0.05em -0.05em 0.05em #FFF,
-        -0.05em  0.05em 0.05em #FFF,
-         0       0.05em 0.05em #FFF,
-         0      -0.05em 0.05em #FFF,
-         0       0      0.05em #FFF;
+/* Former outlined-text styles: now plain text in the theme color */
+.text-outline-black,
+.text-outline-white {
+    color: var(--text);
+    text-shadow: none;
 }
 
 input {
@@ -216,56 +272,44 @@ input {
 .send-button {
     width: 80px;
     height: 39px;
-    color: #FFF;
-    background-color: #ff9d00;
-    text-shadow: 1px 1px 2px #000;
+    color: var(--bg);
+    background-color: var(--text);
     border-radius: 10px;
-    border-width: 2px;
-    border-color: #05445f;
+    border: 1px solid var(--text);
 }
-span {
+
+.send-button:hover,
+.send-button:focus-visible {
+    background-color: var(--muted);
+    border-color: var(--muted);
+}
+
+/* Required-field asterisk */
+label span {
     padding: 0px;
     text-decoration-line: none;
-    color: red;
+    color: var(--required);
     font-size: large;
 }
 
 .tms-email {
     padding: 10px;
-    color: #FFF;
+    color: var(--text);
     font-size: large;
-    text-shadow:
-        -1px 0 0.5px #614601,
-        1px 0 0.5px #614601,
-        1px 1px 0.5px #614601,
-        -1px -1px 0.5px #614601,
-        1px -1px 0.5px #614601,
-        -1px 1px 0.5px #614601,
-        0 1px 0.5px #614601,
-        0 -1px 0.5px #614601;
 }
 
 /* App feature pages (Focus Laser, Memory Pirates) */
 article h2 {
-    color: #FFF;
-    text-shadow:
-        -0.05em  0      0.05em #000,
-         0.05em  0      0.05em #000,
-         0.05em  0.05em 0.05em #000,
-        -0.05em -0.05em 0.05em #000,
-         0.05em -0.05em 0.05em #000,
-        -0.05em  0.05em 0.05em #000,
-         0       0.05em 0.05em #000,
-         0      -0.05em 0.05em #000;
+    color: var(--text);
 }
 
 .status-badge {
     display: inline-block;
     padding: 0.2em 0.8em;
     margin-bottom: 0.5em;
-    background-color: #FBB03B;
-    color: #000;
-    border: 2px solid #000;
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
     border-radius: 999px;
     font-size: 0.9em;
 }
@@ -279,11 +323,11 @@ article h2 {
     max-width: 40%;
     aspect-ratio: 1;
     object-fit: cover;
-    border: 0.1em solid #000;
+    border: 1px solid var(--border-soft);
     border-radius: 22.5%;
     float: left;
     margin: 0 1.5em 1em 0;
-    background-color: #05445f;
+    background-color: var(--surface-2);
 }
 
 .fact-grid {
@@ -296,8 +340,8 @@ article h2 {
 
 .fact-grid div,
 .feature-grid div {
-    background-color: rgba(255, 255, 255, 0.85);
-    border: 2px solid #000;
+    background-color: var(--surface-2);
+    border: 1px solid var(--border-soft);
     border-radius: 8px;
     padding: 0.75em 1em;
 }
@@ -332,8 +376,8 @@ article h2 {
 
 .steps li {
     counter-increment: step;
-    background-color: rgba(255, 255, 255, 0.85);
-    border: 2px solid #000;
+    background-color: var(--surface-2);
+    border: 1px solid var(--border-soft);
     border-radius: 8px;
     padding: 0.75em 1em;
 }
@@ -346,8 +390,8 @@ article h2 {
     width: 1.8em;
     height: 1.8em;
     margin-right: 0.5em;
-    background-color: #FBB03B;
-    border: 2px solid #000;
+    background-color: var(--bg);
+    border: 1px solid var(--border);
     border-radius: 50%;
     font-weight: bold;
 }
@@ -371,9 +415,9 @@ article h2 {
     max-width: 320px;
     height: auto;
     margin: 0 auto;
-    border: 2px solid #000;
+    border: 1px solid var(--border-soft);
     border-radius: 14px;
-    box-shadow: 2px 2px 10px #05445f;
+    box-shadow: var(--shadow);
 }
 
 .shot-row-single {
@@ -407,9 +451,9 @@ article h2 {
     justify-content: center;
     min-height: 220px;
     padding: 1em;
-    border: 2px dashed #000;
+    border: 1px dashed var(--muted);
     border-radius: 12px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--surface-2);
     font-size: 0.9em;
 }
 
@@ -422,7 +466,7 @@ article h2 {
 .about-portrait {
     width: 260px;
     max-width: 45%;
-    border: 0.1em solid #000;
+    border: 1px solid var(--border-soft);
     border-radius: 8px;
     float: right;
     margin: 0 0 1em 1.5em;
@@ -444,9 +488,9 @@ article h2 {
     left: -9999px;
     z-index: 999;
     padding: 1em;
-    background-color: #FFF;
-    color: #05445f;
-    text-shadow: none;
+    background-color: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
     opacity: 0;
 }
 
@@ -489,7 +533,7 @@ article h2 {
     height: 140px;
     flex-shrink: 0;
     border-radius: 22.5%;
-    box-shadow: 2px 2px 10px #05445f;
+    box-shadow: var(--shadow);
 }
 
 .case-intro h2 {
@@ -502,7 +546,7 @@ article h2 {
 
 .case-meta {
     font-size: 0.9em !important;
-    color: #05445f;
+    color: var(--muted);
     margin-bottom: 0;
 }
 
@@ -528,14 +572,14 @@ article h2 {
     width: 100%;
     height: auto;
     border-radius: 14px;
-    box-shadow: 2px 2px 10px #05445f;
+    box-shadow: var(--shadow);
 }
 
 .case-study figcaption {
     margin-top: 0.5em;
     font-size: 0.85em;
     text-align: center;
-    color: #05445f;
+    color: var(--muted);
 }
 
 .case-split {
