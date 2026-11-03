@@ -676,3 +676,15 @@ article h2 {
         display: none;
     }
 }
+
+/* Wider screens: the row of three matches the text column width */
+@media (min-width: 641px) {
+    .case-shots-three {
+        max-width: 760px;
+        flex-wrap: nowrap;
+    }
+
+    .case-shots-three figure {
+        width: calc((100% - 2em) / 3);
+    }
+}
