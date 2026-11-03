@@ -688,3 +688,19 @@ article h2 {
         width: calc((100% - 2em) / 3);
     }
 }
+
+/* Wider screens: the landscape shot joins the top row, so the
+   orientation section is text only. Phones keep the original layout. */
+@media (min-width: 641px) {
+    .case-split {
+        grid-template-columns: 1fr;
+    }
+
+    .case-split-shots {
+        display: none;
+    }
+}
+
+.case-split > div > p:first-child {
+    margin-top: 0;
+}
