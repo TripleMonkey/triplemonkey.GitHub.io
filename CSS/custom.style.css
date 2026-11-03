@@ -640,3 +640,39 @@ article h2 {
         margin-right: auto;
     }
 }
+
+/* Themes shot: next to the landscape shot on phones, in the features row elsewhere */
+.case-split-shots {
+    width: var(--shot-w);
+    max-width: 100%;
+}
+
+.case-split-shots figure {
+    width: 100%;
+}
+
+.shot-phone-only {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .case-split-shots {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        width: auto;
+    }
+
+    .case-split-shots figure {
+        width: auto;
+        margin: 0;
+    }
+
+    .shot-phone-only {
+        display: block;
+    }
+
+    .shot-wide-only {
+        display: none;
+    }
+}
