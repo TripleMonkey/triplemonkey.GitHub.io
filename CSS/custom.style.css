@@ -584,3 +584,59 @@ article h2 {
         grid-template-columns: 1fr;
     }
 }
+
+/* All case-study screenshots share one size: the width of each image
+   in the top pair. */
+.case-study {
+    --shot-w: 292px;
+}
+
+.case-shots,
+.case-shots-three {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    max-width: calc(3 * var(--shot-w) + 2em);
+}
+
+.case-shots figure,
+.case-split figure {
+    width: var(--shot-w);
+    max-width: 100%;
+}
+
+.case-split {
+    grid-template-columns: 1fr var(--shot-w);
+}
+
+@media (max-width: 640px) {
+    /* Phones: two images per row, everywhere */
+    .case-shots,
+    .case-shots-three {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: none;
+    }
+
+    .case-shots figure {
+        width: auto;
+    }
+
+    .case-shots-three figure:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 0.5em);
+    }
+
+    .case-split {
+        grid-template-columns: 1fr;
+    }
+
+    .case-split figure {
+        width: calc(50% - 0.5em);
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
