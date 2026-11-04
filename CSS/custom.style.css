@@ -145,26 +145,44 @@ a:focus {
     display: none;
 }
 
-.btn-success {
-    color: var(--bg);
-    background-color: var(--text);
-    border-color: var(--text);
-}
-
 /* Footer style */
 footer {
     font-size: small;
     display: flex;
+    flex-direction: column;
     flex-shrink: 0;
     justify-content: center;
     align-items: center;
-    padding-top: 1em;
+    gap: 0.5em;
+    padding: 1.5em 1em 0.5em;
+    text-align: center;
     background-color: var(--bg);
     color: var(--muted);
     border-top: 1px solid var(--border-soft);
 }
 
-/* Content styles */
+.footer-heading {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--text);
+    margin-bottom: 0.4em;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4em 1.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-soon {
+    color: var(--muted);
+}
+
+/* Content styles (thankyou.html card) */
 .card {
     justify-content: space-around;
     background-color: var(--surface);
@@ -174,35 +192,11 @@ footer {
     aspect-ratio: calc(2/3);
 }
 
-.card-img-top {
-    width: 90%;
-    height: 60%;
-    object-fit: cover;
-    border-radius: 3%;
-}
-
-section p {
-    align-items: center;
-    justify-content: space-between;
-}
-
 .outer-border {
     background-color: transparent;
     padding: 0;
     border: none;
     border-radius: 12px;
-}
-
-/* Home page project cards are buttons */
-button.outer-border {
-    color: var(--text);
-    border: 1px solid var(--border-soft);
-    overflow: hidden;
-}
-
-button.outer-border:hover,
-button.outer-border:focus-visible {
-    border-color: var(--border);
 }
 
 /* Body styles */
@@ -215,7 +209,8 @@ section {
 section h1,
 section h3,
 section h4,
-section h5 {
+section h5,
+article h2 {
     color: var(--text);
 }
 
@@ -232,19 +227,11 @@ article {
     display: flow-root;
 }
 
-
 .article-image-lt {
     max-width: 140px;
     border-radius: 8px;
     float: left;
     margin-right: 2em;
-}
-
-.article-image-rt {
-    max-width: 30%;
-    border: 1px solid var(--border-soft);
-    border-radius: 8px;
-    float: right;
 }
 
 /* App Store button minimum size per Apple guidelines */
@@ -257,9 +244,8 @@ article {
     text-align: center;
 }
 
-/* Former outlined-text styles: now plain text in the theme color */
-.text-outline-black,
-.text-outline-white {
+/* Page titles: plain text in the theme color */
+.title-text {
     color: var(--text);
     text-shadow: none;
 }
@@ -299,10 +285,6 @@ label span {
 }
 
 /* App feature pages (Focus Laser, Memory Pirates) */
-article h2 {
-    color: var(--text);
-}
-
 .status-badge {
     display: inline-block;
     padding: 0.2em 0.8em;
@@ -350,7 +332,6 @@ article h2 {
 .feature-grid h3 {
     font-size: 1.05em;
     margin-bottom: 0.25em;
-    text-shadow: none;
 }
 
 .fact-grid p,
@@ -363,104 +344,6 @@ article h2 {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 0.75em;
     margin-top: 0.5em;
-}
-
-.steps {
-    counter-reset: step;
-    list-style: none;
-    padding-left: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.75em;
-}
-
-.steps li {
-    counter-increment: step;
-    background-color: var(--surface-2);
-    border: 1px solid var(--border-soft);
-    border-radius: 8px;
-    padding: 0.75em 1em;
-}
-
-.steps li::before {
-    content: counter(step);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.8em;
-    height: 1.8em;
-    margin-right: 0.5em;
-    background-color: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 50%;
-    font-weight: bold;
-}
-
-/* Screenshot pairs: side by side on wide screens, stacked on phones */
-.shot-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1em;
-    margin: 1em 0;
-}
-
-.shot-row figure {
-    margin: 0;
-    text-align: center;
-}
-
-.shot-row img {
-    display: block;
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    margin: 0 auto;
-    border: 1px solid var(--border-soft);
-    border-radius: 14px;
-    box-shadow: var(--shadow);
-}
-
-.shot-row-single {
-    grid-template-columns: 1fr;
-}
-
-.shot-row-three {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-}
-
-.shot-row-three img {
-    max-width: 260px;
-}
-
-/* On phones, keep screenshots from running the full page height */
-@media (max-width: 575px) {
-    .shot-row img {
-        max-width: 260px;
-    }
-}
-
-.shot-row figcaption {
-    margin-top: 0.4em;
-    font-size: 0.9em;
-}
-
-/* Shown until a real screenshot is added */
-.shot-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 220px;
-    padding: 1em;
-    border: 1px dashed var(--muted);
-    border-radius: 12px;
-    background-color: var(--surface-2);
-    font-size: 0.9em;
-}
-
-.app-icon-lg.shot-placeholder {
-    min-height: 0;
-    height: auto;
-    border-radius: 22.5%;
 }
 
 .about-portrait {
@@ -501,8 +384,10 @@ article h2 {
 }
 /* ---------- Case study layout (focus_laser.html) ----------
    One continuous article: readable text width, screenshots
-   sized to their images so there is no empty space around them. */
+   sized to their images so there is no empty space around them.
+   All screenshots share one size (--shot-w). */
 .case-study {
+    --shot-w: 292px;
     padding: 2em 1.5em;
 }
 
@@ -550,17 +435,19 @@ article h2 {
     margin-bottom: 0;
 }
 
-.case-shots {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.case-shots,
+.case-shots-three {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1em;
-    max-width: 600px;
+    max-width: calc(3 * var(--shot-w) + 2em);
     margin: 1.2em auto 1.5em;
 }
 
-.case-shots-three {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 760px;
+.case-shots figure {
+    width: var(--shot-w);
+    max-width: 100%;
 }
 
 .case-study figure {
@@ -584,9 +471,20 @@ article h2 {
 
 .case-split {
     display: grid;
-    grid-template-columns: 1fr 260px;
+    grid-template-columns: 1fr;
     gap: 1.5em;
     align-items: start;
+}
+
+.case-split > div > p:first-child {
+    margin-top: 0;
+}
+
+/* Themes shot: next to the landscape shot on phones, in the features row elsewhere */
+.case-split-shots {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
 }
 
 .case-features {
@@ -597,6 +495,28 @@ article h2 {
     margin-bottom: 0.3em;
 }
 
+.shot-phone-only {
+    display: none;
+}
+
+/* Wider screens: the row of three matches the text column width, and the
+   landscape shot joins the top row, so the orientation section is text only. */
+@media (min-width: 641px) {
+    .case-shots-three {
+        max-width: 760px;
+        flex-wrap: nowrap;
+    }
+
+    .case-shots-three figure {
+        width: calc((100% - 2em) / 3);
+    }
+
+    .case-split-shots {
+        display: none;
+    }
+}
+
+/* Phones: two images per row, everywhere */
 @media (max-width: 640px) {
     .case-study {
         padding: 1.25em 1em;
@@ -613,49 +533,6 @@ article h2 {
         height: 96px;
     }
 
-    .case-split {
-        grid-template-columns: 1fr;
-    }
-
-    .case-split figure,
-    .case-shots-three {
-        max-width: 280px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .case-shots-three {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* All case-study screenshots share one size: the width of each image
-   in the top pair. */
-.case-study {
-    --shot-w: 292px;
-}
-
-.case-shots,
-.case-shots-three {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
-    max-width: calc(3 * var(--shot-w) + 2em);
-}
-
-.case-shots figure,
-.case-split figure {
-    width: var(--shot-w);
-    max-width: 100%;
-}
-
-.case-split {
-    grid-template-columns: 1fr var(--shot-w);
-}
-
-@media (max-width: 640px) {
-    /* Phones: two images per row, everywhere */
     .case-shots,
     .case-shots-three {
         display: grid;
@@ -673,45 +550,6 @@ article h2 {
         width: calc(50% - 0.5em);
     }
 
-    .case-split {
-        grid-template-columns: 1fr;
-    }
-
-    .case-split figure {
-        width: calc(50% - 0.5em);
-        max-width: none;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-/* Themes shot: next to the landscape shot on phones, in the features row elsewhere */
-.case-split-shots {
-    width: var(--shot-w);
-    max-width: 100%;
-}
-
-.case-split-shots figure {
-    width: 100%;
-}
-
-.shot-phone-only {
-    display: none;
-}
-
-@media (max-width: 640px) {
-    .case-split-shots {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1em;
-        width: auto;
-    }
-
-    .case-split-shots figure {
-        width: auto;
-        margin: 0;
-    }
-
     .shot-phone-only {
         display: block;
     }
@@ -721,70 +559,9 @@ article h2 {
     }
 }
 
-/* Wider screens: the row of three matches the text column width */
-@media (min-width: 641px) {
-    .case-shots-three {
-        max-width: 760px;
-        flex-wrap: nowrap;
-    }
-
-    .case-shots-three figure {
-        width: calc((100% - 2em) / 3);
-    }
-}
-
-/* Wider screens: the landscape shot joins the top row, so the
-   orientation section is text only. Phones keep the original layout. */
-@media (min-width: 641px) {
-    .case-split {
-        grid-template-columns: 1fr;
-    }
-
-    .case-split-shots {
-        display: none;
-    }
-}
-
-.case-split > div > p:first-child {
-    margin-top: 0;
-}
-
 /* Keep in-page jumps (e.g. about.html#connect) clear of the fixed navbar */
 [id] {
     scroll-margin-top: 80px;
-}
-
-/* ---------- Shared footer (footer.html) ---------- */
-footer {
-    flex-direction: column;
-    gap: 0.5em;
-    padding: 1.5em 1em 0.5em;
-    text-align: center;
-}
-
-.footer-heading {
-    font-size: 1em;
-    font-weight: bold;
-    color: var(--text);
-    margin-bottom: 0.4em;
-}
-
-.footer-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.4em 1.5em;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-nav a {
-    color: var(--text);
-}
-
-.footer-soon {
-    color: var(--muted);
 }
 
 /* ---------- Parallax banner (index.html, focus_laser.html, focus_laser_support.html) ----------
@@ -822,12 +599,6 @@ footer {
 /* Home banner (TangleBW.jpg): show the busy center of the drawing */
 .parallax-image-home {
     object-position: 50% 45%;
-}
-
-/* Home title has no card, so give it the page color to slide over the banner cleanly */
-.home-title {
-    background-color: var(--bg);
-    border-radius: 12px;
 }
 
 .support-page h1 {
