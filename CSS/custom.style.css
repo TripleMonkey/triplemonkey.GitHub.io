@@ -787,7 +787,7 @@ footer {
     color: var(--muted);
 }
 
-/* ---------- Parallax banner (focus_laser_support.html) ----------
+/* ---------- Parallax banner (index.html, focus_laser.html, focus_laser_support.html) ----------
    parallax.js moves the whole banner, edges included, at half the
    scroll speed. Only the content card scrolls at full speed, so it
    slides over both the banner and the page background around it. */
@@ -812,11 +812,22 @@ footer {
 .parallax-content {
     position: relative;
     z-index: 1;
-    margin-top: 2em;
+    margin-top: -2em;
 }
 
 .parallax-content article {
     box-shadow: var(--shadow);
+}
+
+/* Home banner (TangleBW.jpg): show the busy center of the drawing */
+.parallax-image-home {
+    object-position: 50% 45%;
+}
+
+/* Home title has no card, so give it the page color to slide over the banner cleanly */
+.home-title {
+    background-color: var(--bg);
+    border-radius: 12px;
 }
 
 .support-page h1 {

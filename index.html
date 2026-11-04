@@ -16,119 +16,95 @@
     <header w3-include-html="setup.html"></header>
     <main id="main">
 
-        <!-- Project cards -->
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col">
-                    <button class="col outer-border" aria-label="Imagine.">
-                        <div class="card">
-                            <p class="card-title text-outline-black" aria-hidden="true">imagine</p>
-                            <img class="card-img-top" src="Images/A_250px_width.png"
-                                alt="Letter A in circle spray painted red over violet and white pair of hands forming a letter A, on black background.">
-                            <div class="card-body">
-                                <!-- <p class="card-text">imagine</p> -->
-                            </div>
-                        </div>
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="col outer-border" aria-label="Illustrate.">
-                        <div class="card">
-                            <p class="card-title text-outline-black" aria-hidden="true">illustrate</p>
-                            <img class="card-img-top" src="Images/ipadCampShareMockup_250px_width.png"
-                                alt="CampShare app design mockup on iPad.">
-                            <div class="card-body">
-                                <!-- <p class="card-text">illustrate</p> -->
-                            </div>
-                        </div>
-                    </button>
-                </div>
-                <div class="col">
-                    <button class="col outer-border" aria-label="Iterate">
-                        <div class="card">
-                            <p class="card-title text-outline-black" aria-hidden="true">iterate</p>
-                            <img class="card-img-top" src="Images/MemoryPirate250px_width.png"
-                                alt="Memory Pirates app icon, wooden treasure chest with gold trim on orange gradiant background.">
-                            <div class="card-body">
-                                <!-- <p class="card-text">iterate</p> -->
-                            </div>
-                        </div>
-                    </button>
-                </div>
-            </div>
+        <!-- Banner: moves slower than the page (parallax.js), so the content scrolls over it -->
+        <div class="parallax-hero">
+            <img class="parallax-image parallax-image-home" src="Images/TangleBW.jpg"
+                alt="Black and white pencil drawing by Nigel Krajewski: a dense tangle of jointed, insect-like limbs, spikes, and coils.">
         </div>
 
-        <!-- Page title / author -->
-        <div class="centered" style="padding: 3%;">
-            <h1 class="text-outline-black">TripleMonkey Studio</h1>
-            <p style="text-shadow: none;">from</p>
-            <h2 class="text-outline-white">Nigel Krajewski</h2>
+        <div class="parallax-content">
+
+
+            <!-- Profile brief-->
+            <section class="outer-border">
+
+                <article>
+                    <!-- Page title / author -->
+                    <div class="centered home-title" style="padding: 3%;">
+                        <h1 class="text-outline-black">TripleMonkey Studio</h1>
+                        <p style="text-shadow: none;">from</p>
+                        <h2 class="text-outline-white">Nigel Krajewski</h2>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Focus Laser brief and link -->
+            <section class="outer-border">
+                <article>
+                    <span class="status-badge">coming soon to iPhone</span>
+                    <h4>Focus Laser</h4>
+                    <image class="article-image-lt" src="Images/focus_laser/focus_laser_icon_250px.png"
+                        alt="Focus Laser app icon: red concentric rings with a laser line, on black">
+                    </image>
+                    <p>A focus timer for iPhone that steps back while you work. Once a session starts, the controls dim
+                        and a glowing laser line tracks your progress, in portrait in your hand or in landscape on your
+                        desk.</p>
+                    <aside>
+                        <ul>
+                            <li>Preset and custom focus sessions</li>
+                            <li>Block distracting apps during focus</li>
+                            <li>Home and lock screen widgets, nine themes</li>
+                        </ul>
+                    </aside>
+                    <aside>
+                        <a class="learn-more-link" href="focus_laser.html">learn more</a>
+                    </aside>
+                </article>
+            </section>
+
+            <!-- Memory Pirates brief and link -->
+            <section class="outer-border">
+                <article>
+                    <h4>Memory Pirates</h4>
+                    <a href="https://apps.apple.com/us/app/memory-pirates/id6450493085">
+                        <image class="article-image-lt app-store-link"
+                            src="Images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                            alt="Download Memory Pirates on the App Store"></image>
+                    </a>
+                    <p>Improve your memory recall with this classic image matching game. Open all of the matching
+                        treasure
+                        chests to win. Challenge yourself to beat your best time and fewest moves, then climb the
+                        Game Center leaderboards to be the best among your friends and the world. Free on iPhone.</p>
+                    <image class="article-image-lt" src="Images/MemoryPirate250px_width.png"
+                        alt="Memory Pirates app icon, treasure chest on orange background">
+                    </image>
+                    <aside>
+                        <ul>
+                            <li>Improve Memory Recall</li>
+                            <li>Track your progress with customizable game history</li>
+                            <li>Compete globally and with friends with leaderboards and achievements</li>
+                        </ul>
+                    </aside>
+                    <aside>
+                        <a class="learn-more-link" href="memory_pirates.html">learn more</a>
+                    </aside>
+                </article>
+            </section>
+
+            <section class="outer-border">
+
+                <article>
+                    <h4>About</h4>
+                    <p>I am Nigel. TripleMonkey Studio is my independent design and development studio, creating clean,
+                        reliable iOS apps focused on practical utility and a little bit of fun. From first sketch to
+                        production code, I care about both how an app looks and how it works.</p>
+                    <p>My DIY style, detail-oriented design, and problem-solving have guided me on a journey of
+                        continued
+                        learning. Here you can explore my apps, past and present, along with work in design and other
+                        art mediums.</p>
+                </article>
+            </section>
         </div>
-
-        <!-- Profile brief-->
-        <section class="outer-border">
-            <article>
-                <h4>What Is TM Studio?</h4>
-                <p>I am Nigel. TripleMonkey Studio is my independent design and development studio, creating clean,
-                    reliable iOS apps focused on practical utility and a little bit of fun. From first sketch to
-                    production code, I care about both how an app looks and how it works.</p>
-                <p>My DIY style, detail-oriented design, and problem-solving have guided me on a journey of continued
-                    learning. Here you can explore my apps, past and present, along with work in design and other
-                    art mediums.</p>
-            </article>
-        </section>
-
-        <!-- Focus Laser brief and link -->
-        <section class="outer-border">
-            <article>
-                <span class="status-badge">coming soon to iPhone</span>
-                <h4>Focus Laser</h4>
-                <image class="article-image-lt" src="Images/focus_laser/focus_laser_icon_250px.png"
-                    alt="Focus Laser app icon: red concentric rings with a laser line, on black">
-                </image>
-                <p>A focus timer for iPhone that steps back while you work. Once a session starts, the controls dim
-                    and a glowing laser line tracks your progress, in portrait in your hand or in landscape on your
-                    desk.</p>
-                <aside>
-                    <ul>
-                        <li>Preset and custom focus sessions</li>
-                        <li>Block distracting apps during focus</li>
-                        <li>Home and lock screen widgets, nine themes</li>
-                    </ul>
-                </aside>
-                <aside>
-                    <a class="learn-more-link" href="focus_laser.html">learn more</a>
-                </aside>
-            </article>
-        </section>
-
-        <!-- Memory Pirates brief and link -->
-        <section class="outer-border">
-            <article>
-                <h4>Memory Pirates</h4>
-                <h5><a href="https://apps.apple.com/us/app/memory-pirates/id6450493085">
-                    <image class="article-image-lt app-store-link"
-                        src="Images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
-                        alt="Download Memory Pirates on the App Store"></image>
-                </a></h5>
-                <p>Improve your memory recall with this classic image matching game. Open all of the matching treasure
-                    chests to win. Challenge yourself to beat your best time and fewest moves, then climb the
-                    Game Center leaderboards to be the best among your friends and the world. Free on iPhone.</p>
-                <image class="article-image-lt" src="Images/MemoryPirate250px_width.png"
-                    alt="Memory Pirates app icon, treasure chest on orange background">
-                </image>
-                <aside>
-                    <ul>
-                        <li>Apple CloudKit and Core Data</li>
-                        <li>Game Center leaderboards and achievements</li>
-                        <li>SwiftUI framework with MVVM architecture</li>
-                    </ul>
-                </aside>
-                <aside>
-                    <a class="learn-more-link" href="memory_pirates.html">learn more</a>
-                </aside>
-            </article>
-        </section>
 
     </main>
     <footer class="static-bottom" w3-include-html="footer.html"></footer>
@@ -136,6 +112,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="./triplemonkey.js"></script>
+    <script src="./parallax.js"></script>
     <script>
         includeHTML();
     </script>
