@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Focus Laser Support — TripleMonkey Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Focus Laser support and help center: getting started, widgets, subscriptions, restoring purchases, and how to contact TripleMonkey Studio.">
+    <!-- bootstrap stylesheet adds via setup.html include -->
+    <!-- include custom CSS here for improved response -->
+    <link rel="stylesheet" href="CSS/custom.style.css">
+    <script src="theme.js"></script>
+</head>
+
+<body>
+    <header w3-include-html="setup.html"></header>
+    <!-- id="main" required for skip-to-main accessibility -->
+    <main id="main">
+
+        <!-- Banner: moves slower than the page (parallax.js), so the content scrolls over it -->
+        <div class="parallax-hero">
+            <img class="parallax-image" src="Images/focus_laser/support_banner_1200.jpg"
+                srcset="Images/focus_laser/support_banner_1200.jpg 1200w, Images/focus_laser/support_banner_2400.jpg 2400w"
+                sizes="100vw"
+                alt="Focus Laser banner: a glowing red laser line above the words FOCUS:LASER in red digital-clock letters, on black.">
+        </div>
+
+        <div class="parallax-content">
+            <section class="outer-border">
+                <article class="case-study support-page">
+
+                    <h1>Focus Laser Support &amp; Help Center</h1>
+                    <p class="lede">Welcome to the Focus Laser Support Center! Whether you are looking to set up your
+                        first focus session, troubleshoot your home screen widgets, or manage your subscription, we've
+                        got you covered.</p>
+
+                    <!-- Getting started -->
+                    <h2>Getting Started</h2>
+                    <h3>What Is Focus Laser?</h3>
+                    <p>Focus Laser is designed to help you strip away digital distractions, track deep work sessions,
+                        and maintain total clarity throughout your day.</p>
+
+                    <h3>Quick Setup Guide</h3>
+                    <ol>
+                        <li><strong>Grant Necessary Permissions:</strong> When prompted, allow Notification permissions
+                            so Focus Laser can notify you when a focus session or break ends.</li>
+                        <li><strong>Set Your Focus Duration:</strong> Tap the main timer interface to adjust your
+                            session lengths, short break intervals, and daily focus targets.</li>
+                        <li><strong>Start Your Session:</strong> Tap Start to enter laser-focus mode.</li>
+                    </ol>
+
+                    <!-- Widgets -->
+                    <h2>Widgets &amp; Live Activities</h2>
+                    <p>Focus Laser includes Home Screen and Lock Screen widgets to help you keep track of your active
+                        focus session at a glance.</p>
+
+                    <h3>Adding a Widget to Your Home Screen</h3>
+                    <ol>
+                        <li>Touch and hold an empty area on your iPhone Home Screen until the apps jiggle.</li>
+                        <li>Tap the <strong>+</strong> button in the top corner.</li>
+                        <li>Search for <strong>Focus Laser</strong> and tap on it.</li>
+                        <li>Select your preferred widget size (Small, Medium, or Large) and tap
+                            <strong>Add Widget</strong>.</li>
+                    </ol>
+
+                    <h3>Widget Troubleshooting</h3>
+                    <p>If your widget is not updating or displays blank:</p>
+                    <ul>
+                        <li><strong>Restart the App:</strong> Open Focus Laser, force close it (swipe up from the App
+                            Switcher), and reopen it.</li>
+                        <li><strong>Re-add the Widget:</strong> Remove the widget from your Home Screen, restart your
+                            device, and add the widget back.</li>
+                        <li><strong>Check Background App Refresh:</strong> Go to iOS Settings &gt; General &gt;
+                            Background App Refresh and ensure it is turned ON for Focus Laser.</li>
+                    </ul>
+
+                    <!-- Purchases -->
+                    <h2>In-App Purchases &amp; Subscriptions</h2>
+                    <h3>Managing Your Subscription</h3>
+                    <p>Focus Laser Premium features are managed directly through your Apple ID account. To view,
+                        change, or cancel your subscription:</p>
+                    <ol>
+                        <li>Open the <strong>Settings</strong> app on your iPhone.</li>
+                        <li>Tap your <strong>Name / Apple ID</strong> at the top.</li>
+                        <li>Tap <strong>Subscriptions</strong>.</li>
+                        <li>Select <strong>Focus Laser</strong> to adjust your plan or turn off auto-renewal.</li>
+                    </ol>
+
+                    <h3>Restoring Previous Purchases</h3>
+                    <p>If you reinstalled the app or upgraded to a new iPhone and your Pro features aren't showing
+                        up:</p>
+                    <ol>
+                        <li>Open Focus Laser.</li>
+                        <li>Go to the <strong>Settings</strong> menu inside the app.</li>
+                        <li>Tap <strong>Restore Purchases</strong>.</li>
+                        <li>Sign in with the Apple ID used for the original purchase if prompted.</li>
+                    </ol>
+
+                    <!-- Contact -->
+                    <h2 id="contact">Still Need Help?</h2>
+                    <p>If you run into any issues, have feature requests, or want to share feedback, we'd love to hear
+                        from you! Complete the form below and include your email, and we will return your message as
+                        soon as possible. You can also write to
+                        <a href="mailto:support@TripleMonkey.studio">support@TripleMonkey.studio</a>.</p>
+
+                    <form action="https://formsubmit.co/triplemonkeystudio@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="Focus Laser support request">
+                        <input type="hidden" name="_next" value="https://triplemonkey.studio/thankyou.html">
+                        <div class="form-group">
+                            <label for="support-name">name</label>
+                            <input type="text" class="form-control" id="support-name" name="name"
+                                placeholder="your name">
+                            <label for="support-email">email <span>*</span></label>
+                            <input type="email" class="form-control" id="support-email" name="email"
+                                placeholder="youremail@address.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="support-message">message <span>*</span></label>
+                            <textarea class="form-control" id="support-message" name="message" rows="4"
+                                required></textarea>
+                            <label>required <span>*</span></label>
+                        </div>
+                        <button class="send-button" type="submit" style="margin: 15px 0;">send</button>
+                    </form>
+
+                    <p class="case-meta">Focus Laser is proudly developed by TripleMonkey Studio.
+                        <a href="focus_laser.html">Learn more about Focus Laser</a>.</p>
+
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer class="static-bottom" w3-include-html="footer.html"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Script for including header -->
+    <script src="./triplemonkey.js"></script>
+    <script src="./parallax.js"></script>
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>

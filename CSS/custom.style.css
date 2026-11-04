@@ -753,3 +753,83 @@ article h2 {
 [id] {
     scroll-margin-top: 80px;
 }
+
+/* ---------- Shared footer (footer.html) ---------- */
+footer {
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1.5em 1em 0.5em;
+    text-align: center;
+}
+
+.footer-heading {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--text);
+    margin-bottom: 0.4em;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4em 1.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav a {
+    color: var(--text);
+}
+
+.footer-soon {
+    color: var(--muted);
+}
+
+/* ---------- Parallax banner (focus_laser_support.html) ----------
+   parallax.js moves the whole banner, edges included, at half the
+   scroll speed. Only the content card scrolls at full speed, so it
+   slides over both the banner and the page background around it. */
+.parallax-hero {
+    position: relative;
+    z-index: 0;
+    height: clamp(200px, 37.5vw, 70vh);
+    overflow: hidden;
+    background-color: #0B0B10; /* matches the banner's black, both themes */
+    will-change: transform;
+}
+
+.parallax-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 100%; /* keep the laser line and title in view */
+}
+
+/* Content slides up over the bottom of the banner */
+.parallax-content {
+    position: relative;
+    z-index: 1;
+    margin-top: 2em;
+}
+
+.parallax-content article {
+    box-shadow: var(--shadow);
+}
+
+.support-page h1 {
+    font-size: 2em;
+    margin-bottom: 0.4em;
+}
+
+.support-page h2 {
+    font-size: 1.5em;
+    margin-top: 1.8em;
+}
+
+.support-page h3 {
+    font-size: 1.15em;
+    margin-top: 1.2em;
+}
