@@ -511,6 +511,10 @@ article aside {
     border-radius: 8px;
     float: right;
     margin: 0 0 1em 1.5em;
+    /* Crop the top 15% of the 520x564 image: show only the bottom 85% of its height */
+    aspect-ratio: 520 / 479.4;
+    object-fit: cover;
+    object-position: 50% 100%;
 }
 
 @media (max-width: 575px) {
@@ -866,6 +870,12 @@ article aside {
 /* About banner (jellyfish1.png) */
 .parallax-image-about {
     object-position: 50% 45%;
+}
+
+/* Memory Pirates support banner (memory_pirates_privacy_banner.png): keep
+   the chest and title centred when the wide banner crops top and bottom */
+.parallax-image-mp-support {
+    object-position: 50% 50%;
 }
 
 /* Home banner (Jellyfish2.png): keep the jellyfish's body in view */

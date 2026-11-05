@@ -24,5 +24,11 @@
         var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         apply(next);
         try { localStorage.setItem(KEY, next); } catch (e) { }
+
+        // On small screens the switch sits in the collapsed navbar menu: close it
+        var menu = event.target.closest('.navbar-collapse.show');
+        if (menu && window.bootstrap) {
+            bootstrap.Collapse.getOrCreateInstance(menu, { toggle: false }).hide();
+        }
     });
 })();

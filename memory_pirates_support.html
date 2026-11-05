@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Pirates Support — TripleMonkey Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Memory Pirates support and privacy policy: what information the app collects, how it is used, and how to contact TripleMonkey Studio.">
+    <!-- bootstrap stylesheet adds via setup.html include -->
+    <!-- include custom CSS here for improved response -->
+    <link rel="stylesheet" href="CSS/custom.style.css">
+    <script src="theme.js"></script>
+</head>
+
+<body>
+    <header w3-include-html="setup.html"></header>
+    <!-- id="main" required for skip-to-main accessibility -->
+    <main id="main">
+
+        <!-- Banner: moves slower than the page (parallax.js), so the content scrolls over it -->
+        <div class="parallax-hero">
+            <img class="parallax-image parallax-image-mp-support" src="Images/memory_pirates_privacy_banner.png"
+                alt="Memory Pirates Privacy Policy banner: a gold-trimmed wooden treasure chest with a keyhole, on a brown-to-gold background.">
+        </div>
+
+        <div class="parallax-content">
+            <section class="outer-border">
+                <article class="case-study support-page">
+
+                    <h1>Memory Pirates Support</h1>
+
+                    <!-- Privacy -->
+                    <h2 id="privacy">Privacy Policy</h2>
+                    <p class="case-meta">Last Updated: 2026-11-05</p>
+                    <p>This Privacy Policy explains how TripleMonkey Studio ("we") collect, use, and share your
+                        information when you use our iOS application, Memory Pirates ("the App").</p>
+
+                    <h3>What information do we collect?</h3>
+                    <p>We do not collect any personally identifiable information ("PII") from you when you use the App.
+                        However, we may collect certain non-PII information, such as your device identifier and device
+                        model. We also use Game Center and iCloud to persist data, which may include your Game Center
+                        username.</p>
+
+                    <h3>How do we use your information?</h3>
+                    <p>We use the non-PII information we collect to improve the App and to provide you with a better
+                        user experience. We also use Game Center and iCloud to persist data so that you can continue
+                        playing the game where you left off on any of your devices.</p>
+
+                    <h3>How do we share your information?</h3>
+                    <p>We do not share your information with any third parties, except as required by law or to provide
+                        you with the services you have requested. For example, we may share your Game Center username
+                        with other players on the Game Center Leaderboards.</p>
+
+                    <h3>How do we protect your information?</h3>
+                    <p>We take all reasonable steps to protect your information from unauthorized access, use, or
+                        disclosure. We use a variety of security measures, including encryption and firewalls, to
+                        protect your data.</p>
+
+                    <h3>Your choices</h3>
+                    <p>You can choose to not use the App, or you can choose to not use Game Center or iCloud to persist
+                        data. You can also delete your Game Center account or disable iCloud synchronization for the
+                        App.</p>
+
+                    <h3>Changes to this Privacy Policy</h3>
+                    <p>We may update this Privacy Policy from time to time. If we make any material changes, we will
+                        notify you by posting the updated Privacy Policy on the App's website.</p>
+
+                    <h3>Contact us</h3>
+                    <p>If you have any questions about this Privacy Policy, please contact us at
+                        <a href="mailto:support@triplemonkey.studio">support@triplemonkey.studio</a>.</p>
+
+                    <!-- Contact -->
+                    <h2 id="contact">Still Need Help?</h2>
+                    <p>If you run into any issues, have feature requests, or want to share feedback, I'd love to hear
+                        from you! Complete the form below and include your email, and I will return your message as
+                        soon as possible. You can also write to
+                        <a href="mailto:support@TripleMonkey.studio">support@TripleMonkey.studio</a>.
+                    </p>
+
+                    <form action="https://formsubmit.co/triplemonkeystudio@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="Memory Pirates support request">
+                        <input type="hidden" name="_next" value="https://triplemonkey.studio/thankyou.html">
+                        <div class="form-group">
+                            <label for="support-name">name</label>
+                            <input type="text" class="form-control" id="support-name" name="name"
+                                placeholder="your name">
+                            <label for="support-email">email <span>*</span></label>
+                            <input type="email" class="form-control" id="support-email" name="email"
+                                placeholder="youremail@address.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="support-message">message <span>*</span></label>
+                            <textarea class="form-control" id="support-message" name="message" rows="4"
+                                required></textarea>
+                            <label>required <span>*</span></label>
+                        </div>
+                        <button class="send-button" type="submit" style="margin: 15px 0;">send</button>
+                    </form>
+
+                    <p class="case-meta">Memory Pirates is proudly developed by TripleMonkey Studio.
+                        <a href="memory_pirates.html">Learn more about Memory Pirates</a>.
+                    </p>
+
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer class="static-bottom" w3-include-html="footer.html"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Script for including header -->
+    <script src="./triplemonkey.js"></script>
+    <script src="./parallax.js"></script>
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>
