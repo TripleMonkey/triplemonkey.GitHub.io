@@ -377,7 +377,7 @@ label span {
     max-width: 40%;
     aspect-ratio: 1;
     object-fit: cover;
-    border: 1px solid var(--border-soft);
+    /* border: 1px solid var(--border-soft); */
     border-radius: 22.5%;
     float: left;
     margin: 0 1.5em 1em 0;
@@ -850,6 +850,14 @@ article aside {
     position: relative;
     z-index: 1;
     margin-top: -2em;
+}
+
+/* Wide desktop views: overlap the banner further. Small and medium widths
+   keep -2em, where the shorter banner would be mostly covered. */
+@media (min-width: 1200px) {
+    .parallax-content {
+        margin-top: -10em;
+    }
 }
 
 .parallax-content article {
