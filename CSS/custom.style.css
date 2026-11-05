@@ -318,15 +318,41 @@ label span {
 }
 
 /* App feature pages (Focus Laser, Memory Pirates) */
-.status-badge {
-    display: inline-block;
-    padding: 0.2em 0.8em;
+/* Home page "coming soon" tag, sized and styled to match the App Store
+   badge: 160px wide at the badge's 119.66:40 ratio, black with a grey rim. */
+.store-badge {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 160px;
+    max-width: 40%;
+    aspect-ratio: 119.66 / 40;
+    box-sizing: border-box;
+    padding: 0 0.9em;
     margin-bottom: 0.5em;
-    background-color: transparent;
-    color: var(--text);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    font-size: 0.9em;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #a6a6a6;
+    border-radius: 11px;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.05;
+}
+
+.store-badge-small {
+    font-size: 11px;
+    letter-spacing: 0.02em;
+}
+
+.store-badge-large {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+@media (max-width: 575px) {
+    .store-badge {
+        max-width: 60%;
+    }
 }
 
 .lede {
@@ -343,6 +369,126 @@ label span {
     float: left;
     margin: 0 1.5em 1em 0;
     background-color: var(--surface-2);
+}
+
+/* App icon wrapped in a link, with a "learn more" caption underneath */
+.app-icon-figure {
+    float: left;
+    width: 160px;
+    max-width: 40%;
+    margin: 0 1.5em 1em 0;
+    text-align: center;
+}
+
+.app-icon-figure .app-icon-lg {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    float: none;
+    margin: 0 0 0.5em;
+}
+
+.app-store-badge {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Feature list with the app icon to its right */
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+/* Feature lists sit beside a floated icon instead of running under it, so
+   the bullets start right of the icon column rather than overlapping it. */
+article aside {
+    display: flow-root;
+}
+
+.feature-row aside {
+    flex: 1;
+}
+
+/* Bullets start flush with the text column's left edge. Drawn with
+   ::before because native list markers hang outside by an inexact amount. */
+.feature-row ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.feature-row li {
+    position: relative;
+    padding-left: 1.25em;
+}
+
+.feature-row li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+}
+
+.feature-row .app-icon-figure {
+    float: none;
+    width: 128px; /* 20% smaller than the 160px badges beside it */
+    margin: 0;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* Caption hangs below the icon out of flow, so the figure is exactly the
+   icon's height and align-items: center lines everything up with its middle */
+.feature-row .app-icon-figure figcaption {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 0.5em;
+}
+
+.feature-row .app-icon-figure .app-icon-lg {
+    margin: 0;
+}
+
+.feature-row {
+    padding-bottom: 2em; /* room for the hanging caption */
+}
+
+.feature-row > .store-badge,
+.feature-row > .app-store-badge-link {
+    flex: 0 0 auto;
+    width: 160px;
+    max-width: 40%;
+    margin: 0;
+}
+
+.feature-row ul {
+    margin-bottom: 0;
+}
+
+@media (max-width: 575px) {
+    .feature-row {
+        flex-direction: column;
+        align-items: stretch;
+        padding-bottom: 0;
+    }
+
+    /* Phones: bullets, then icon and caption, then badge, centred */
+    .feature-row > .store-badge,
+    .feature-row > .app-store-badge-link {
+        order: 1;
+        max-width: 60%;
+        margin: 0 auto 1em;
+    }
+
+    .feature-row .app-icon-figure {
+        margin: 0 auto;
+    }
+
+    .feature-row .app-icon-figure figcaption {
+        position: static;
+    }
 }
 
 .fact-grid {
@@ -390,11 +536,24 @@ label span {
 
 @media (max-width: 575px) {
     .app-icon-lg,
+    .app-icon-figure,
     .about-portrait {
         float: none;
         display: block;
         max-width: 60%;
         margin: 0 auto 1em;
+    }
+}
+
+/* Phones: the About logo drops below the text instead of above it */
+@media (max-width: 575px) {
+    .about-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-card .app-icon-lg {
+        order: 1;
     }
 }
 
