@@ -239,6 +239,13 @@ section h4 {
     font-weight: bolder;
 }
 
+/* Subtitle after an app name in a card heading, e.g. "Booty Hunt" */
+.app-subtitle {
+    font-family: 'Nunito', 'Varela Round', ui-rounded;
+    font-size: 0.85em;
+    font-weight: 300;
+}
+
 /* Cards are centered and just wider than the 760px text column used on the
    Focus Laser page: 760px + 2.5em padding each side + the 1px borders. */
 article {
@@ -491,40 +498,6 @@ article aside {
     }
 }
 
-.fact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 0.75em;
-    clear: both;
-    margin: 1em 0 0;
-}
-
-.fact-grid div,
-.feature-grid div {
-    background-color: var(--surface-2);
-    border: 1px solid var(--border-soft);
-    border-radius: 8px;
-    padding: 0.75em 1em;
-}
-
-.fact-grid h3,
-.feature-grid h3 {
-    font-size: 1.05em;
-    margin-bottom: 0.25em;
-}
-
-.fact-grid p,
-.feature-grid p {
-    margin-bottom: 0;
-}
-
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 0.75em;
-    margin-top: 0.5em;
-}
-
 .about-portrait {
     width: 260px;
     max-width: 45%;
@@ -613,8 +586,58 @@ article aside {
     box-shadow: var(--shadow);
 }
 
+/* Space between the intro and a paragraph that follows it directly */
+.case-intro + p {
+    margin-top: 1.5em;
+}
+
+/* Small caption above the app name, e.g. "Free on iPhone" */
+.case-eyebrow {
+    margin-bottom: 0.15em;
+    font-size: 0.85em !important;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+/* Icon with the App Store button centred underneath */
+.case-icon-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75em;
+    flex-shrink: 0;
+}
+
+.case-icon-store {
+    display: block;
+    width: 140px; /* same width as .case-icon */
+}
+
+/* "Free on iPhone": beside the name on wide screens, above the button on phones */
+.case-eyebrow-phone {
+    display: none;
+}
+
 .case-intro h2 {
     margin-bottom: 0.2em;
+}
+
+/* Subtitle on the app name's line, e.g. "Booty Hunt" (wraps under it if
+   there is no room). Only Memory Pirates has one, so this targets the
+   title only when a subtitle follows it. */
+.case-intro h2:has(+ .case-subtitle) {
+    display: inline-block;
+    margin-right: 0.3em;
+}
+
+.case-subtitle {
+    display: inline-block;
+    font-family: 'Nunito', 'Varela Round', ui-rounded;
+    font-size: 1.15em !important;
+    font-weight: 300;
+    line-height: 1.2 !important;
+    margin-bottom: 0.5em;
 }
 
 .case-intro .lede {
@@ -640,6 +663,11 @@ article aside {
 .case-shots figure {
     width: var(--shot-w);
     max-width: 100%;
+}
+
+/* Second row of shots shown only on phones (see the phone media query) */
+.case-shots-phone-only {
+    display: none;
 }
 
 .case-study figure {
@@ -706,6 +734,15 @@ article aside {
     .case-split-shots {
         display: none;
     }
+
+    .case-shots-four {
+        max-width: 760px;
+        flex-wrap: nowrap;
+    }
+
+    .case-shots-four figure {
+        width: calc((100% - 3em) / 4);
+    }
 }
 
 /* Phones: two images per row, everywhere */
@@ -723,6 +760,27 @@ article aside {
     .case-icon {
         width: 96px;
         height: 96px;
+    }
+
+    .case-icon-col {
+        flex-direction: row; /* button beside the icon on phones */
+        align-items: center;
+        gap: 1em;
+    }
+
+    .case-icon-store {
+        width: 120px; /* Apple's minimum badge width */
+    }
+
+    .case-eyebrow-phone {
+        display: block;
+        margin-bottom: 0.4em;
+        font-size: 0.7em !important; /* fits within the 120px button */
+        letter-spacing: 0.04em;
+    }
+
+    .case-eyebrow-wide {
+        display: none;
     }
 
     .case-shots,
@@ -786,6 +844,17 @@ article aside {
 
 .parallax-content article {
     box-shadow: var(--shadow);
+}
+
+/* Memory Pirates banner (DemilitarizeEarth.png) is a portrait poster: show
+   all of it, centred on a matching yellow, rather than cropping a slice */
+.parallax-hero-poster {
+    background-color: #ffe785;
+}
+
+.parallax-image-poster {
+    object-fit: contain;
+    object-position: 50% 50%;
 }
 
 /* Home banner (TangleBW.jpg): show the busy center of the drawing */
