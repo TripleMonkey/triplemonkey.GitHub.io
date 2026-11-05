@@ -101,6 +101,27 @@ a:focus {
     color: var(--text);
 }
 
+/* Compact (collapsed) menu: the gallery list is always open, shown as an
+   indented sub-list under the "gallery" label instead of a toggle. */
+@media (max-width: 767.98px) {
+    .navbar .dropdown-toggle {
+        pointer-events: none;
+    }
+
+    .navbar .dropdown-toggle::after {
+        display: none;
+    }
+
+    .navbar .dropdown-menu {
+        display: block;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+        padding: 0 0 0 1em;
+        margin: 0;
+    }
+}
+
 .nav-link:hover,
 .nav-link:focus,
 .nav-link.show {
@@ -218,13 +239,25 @@ section h4 {
     font-weight: bolder;
 }
 
+/* Cards are centered and just wider than the 760px text column used on the
+   Focus Laser page: 760px + 2.5em padding each side + the 1px borders. */
 article {
+    max-width: calc(760px + 5em + 2px);
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--surface);
     padding: 1em;
     border-radius: 12px;
     border: 1px solid var(--border-soft);
     color: var(--text);
     display: flow-root;
+}
+
+/* Once the card has room, widen the side padding so the text stays 760px */
+@media (min-width: 880px) {
+    article {
+        padding: 1em 2.5em;
+    }
 }
 
 .article-image-lt {
