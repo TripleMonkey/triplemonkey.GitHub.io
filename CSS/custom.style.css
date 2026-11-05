@@ -1,6 +1,6 @@
 /* ---------- Theme tokens ----------
-   Light (black on white) is the default. Dark mode is applied by
-   theme.js, which sets data-theme="dark" on <html>. */
+   Light (black on white) is the base. theme.js picks light or dark from
+   the OS / browser setting (or the navbar switch) and sets data-theme on <html>. */
 :root {
     --bg: #FFFFFF;
     --surface: #FFFFFF;
