@@ -857,9 +857,14 @@ article aside {
     object-position: 50% 50%;
 }
 
-/* Home banner (TangleBW.jpg): show the busy center of the drawing */
-.parallax-image-home {
+/* About banner (jellyfish1.png) */
+.parallax-image-about {
     object-position: 50% 45%;
+}
+
+/* Home banner (Jellyfish2.png): keep the jellyfish's body in view */
+.parallax-image-home {
+    object-position: 50% 55%;
 }
 
 .support-page h1 {
