@@ -545,7 +545,7 @@ article aside {
         flex-direction: column;
     }
 
-    .about-card .app-icon-lg {
+    .about-card .about-logo-link {
         order: 1;
     }
 }
