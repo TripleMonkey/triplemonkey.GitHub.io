@@ -318,6 +318,12 @@ label span {
     font-size: large;
 }
 
+/* Contact form message box: Bootstrap makes labels inline-block, which
+   shrinks the textarea; a block label lets it span the card's text column */
+.message-label {
+    display: block;
+}
+
 .tms-email {
     padding: 10px;
     color: var(--text);
