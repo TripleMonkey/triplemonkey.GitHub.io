@@ -10,6 +10,8 @@
     --border: #111111;
     --border-soft: #DDDDDD;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    /* Images: shadow offset down and to the left */
+    --img-shadow: -4px 6px 8px rgba(0, 0, 0, 0.3);
     --required: #C62828;
     --bs-body-bg: var(--bg);
     --bs-body-color: var(--text);
@@ -25,8 +27,16 @@
     --border: #F2F2F2;
     --border-soft: #333333;
     --shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    --img-shadow: -4px 6px 10px rgba(0, 0, 0, 0.75);
     --required: #FF7B7B;
     color-scheme: dark;
+}
+
+/* Every image except the parallax banners gets the same shadow.
+   drop-shadow follows the image's shape (rounded corners, transparent
+   logos and badges) rather than drawing a rectangle behind it. */
+img:not(.parallax-image) {
+    filter: drop-shadow(var(--img-shadow));
 }
 
 html, body {
@@ -593,7 +603,6 @@ article aside {
     height: 140px;
     flex-shrink: 0;
     border-radius: 22.5%;
-    box-shadow: var(--shadow);
 }
 
 /* Space between the intro and a paragraph that follows it directly */
@@ -689,7 +698,6 @@ article aside {
     width: 100%;
     height: auto;
     border-radius: 14px;
-    box-shadow: var(--shadow);
 }
 
 .case-study figcaption {
